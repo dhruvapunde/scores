@@ -30,7 +30,7 @@ righthand =
     ees8[f] ees4 bes4) \override Slur.height-limit = #4 \override Slur.ratio = #0.4 bes'^5^(\mf|%rh14
     g4^3 bes g f8[g]|%rh15
     aes8[g] f[bes] ees,4) r|%rh16
-    r1 \bar "|."%rh17
+    R1 \bar "|."%rh17
   }
 }
 
