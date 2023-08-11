@@ -558,7 +558,7 @@ righthandpiecethreevoiceone =
 {
   \override Slur.height-limit = #12
   \override Slur.ratio = #0.20
-  f'8^4 \mf [(ges'8.^>) f'16] | % rh bar 1
+  f'8^4 \mf [(g'8.^>) f'16] | % rh bar 1
   \grace{ees'16 (f'}ees'8) c'8.^> ees'16 | % rh bar 2
   c'8^1[bes^2 c'32^3(bes c' des')] | % rh bar 3
   \grace{c'16 (des'} c'4() \> bes8 \!) | % rh bar 4
