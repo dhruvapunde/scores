@@ -139,6 +139,29 @@ lhone =
   r2 r4^\fermata \bar "|."%lh51
 }
 
+rhtwo =
+{
+  \tempo "Allegretto" 2 = 76
+  \relative c''
+  {
+    \partial 4 gis8[a]|%rh0
+    <<{b4 cis8[dis] e4 dis8[e]} \\ {s2 ais,}>>|%rh1
+    <<{fis'8[dis b a] a[gis cis b]} \\ {a4 fis s e~\>}>>|%rh2
+    <<{b'8[a] cis([b]) a([gis]) a([gis])} \\ {e4\! dis e s}>>|%rh3
+    <gis cis,>8\p[fis] <gis ais,>[e] <gis e b>[<fis dis> <gis e> <a fis>]|%rh4
+  }
+}
+
+lhtwo =
+{
+  r4|%lh0
+  \clef "treble"
+  <gis' e'> <fis' dis'> <e' cis'>2|%lh1
+  <dis' b>2 \clef "bass" <e' e>4 a8[gis]|%lh2
+  fis4 b e cis'8[b]|%lh3
+  ais4 fis b, r|%lh4
+}
+
 \score
 {
   \header
@@ -164,6 +187,35 @@ lhone =
       \key e \major
       \time 4/4
       \lhone
+    }
+  >>
+}
+
+\score
+{
+  \header
+  {
+    title = ""
+    composer = ""
+    opus = ""
+    subtitle = ""
+    subsubtitle = ""
+  }
+  \new PianoStaff
+  <<
+    \new Staff = "rh"
+    {
+      \clef "treble"
+      \key e \major
+      \time 4/4
+      \rhtwo
+    }
+    \new Staff = "lh"
+    {
+      \clef "bass"
+      \key e \major
+      \time 4/4
+      \lhtwo
     }
   >>
 }
