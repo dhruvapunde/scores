@@ -11,6 +11,13 @@
   print-all-headers = ##t
 }
 
+tupvisibility =
+{
+  \override TupletBracket.bracket-visibility = ##f
+  \override TupletNumber.text = ""
+}
+
+
 rhone =
 {
   \relative c''
@@ -25,7 +32,7 @@ rhone =
     \grace{gis4(} b2.) gis,8.[a16]|%rh4
     b2. cis8.[dis16]|%rh5
     <<{e2. dis8[e16]} \\ {s2 ais,^>}>>|%rh6
-    <fis' a,>2. <a cis,>8._\markup{\lower #3 \italic dim.}[<gis b,>16]|%rh7
+    <fis' a,!>2. <a cis,>8._\markup{\lower #3 \italic dim.}[<gis b,>16]|%rh7
     <e gis,>2. gis,8.[a16]|%rh8
     b4 gis'8.[a16] b4 cis,8.[dis16]|%rh9
     e4 cis'8.[dis16] e4 dis,8.[e16]|%rh10
@@ -43,9 +50,11 @@ rhone =
     a2. b8[fis]|%rh22
     <<{g4. fis8 e8.[fis32 e] dis8.[e16]} \\ {s2 ais,2}>>|%rh23
     <<{dis16[fis8.~] fis2 gis,8.[a16]} \\ {b2. s4}>>|%rh24
-    b4 gis'8.^\turn[a16] cis8[b cis, dis]|%rh25
+    \override Script.padding = #2
+    b4 \after 8.*2/3 \turn gis'8. [a16] cis8[b cis, dis]|%rh25
     e4 \grace{dis16(e fis} e2^\trill) dis8.[e16]|%rh26
-    <<{s4 s4. \tuplet 12/1 {\override TupletBracket.bracket-visibility = ##f \override TupletNumber.text = "" \magnifyMusic 0.60{cis8_5_([b ais b_1 cis dis e_1 fis gis a_1 ais b])}} s8} \\ {fis4 \grace{\once \stemUp e8(} dis8.)[cis16] b4 cis'8[r16 b]}>>|%rh27
+    \revert Script.padding
+    <<{s4 s4. \tuplet 12/1 {\tupvisibility \magnifyMusic 0.60{cis8_5_([b ais b_1 cis dis e_1 fis gis a_1 ais b])}} s8} \\ {fis4 \grace{\once \stemUp e8(} dis8.)[cis16] b4 cis'8[r16 b]}>>|%rh27
     fisis4 gis r gis8.[a16]|%rh28
     b2~ b8[bis cis dis]|%rh29
     e4 e,2 dis8.[cis16]|%rh30
@@ -66,17 +75,11 @@ rhone =
     <b a dis,>2. <cis a e>8.[<dis a fis>16]|%rh45
     <e gis, e>2._\markup{\lower #3 dim.} gis,8.[a16]|%rh46
     <b a dis,>2. <cis a e>8.[<dis a fis>16]|%rh47
-    <e gis, e>4\pp gis,8._\markup{\lower #3 {à Gauche}}[a16] <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh48
+    <e gis, e>4\pp gis,8. [a16] \unaCorda <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh48
     <e gis, e>4 gis,8.[a16] <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh49
     q1|%rh50
     r2 r4^\fermata%rh51
   }
-}
-
-tupvisibility =
-{
-  \override TupletBracket.bracket-visibility = ##f
-  \override TupletNumber.text = ""
 }
 
 lhone =
@@ -84,13 +87,13 @@ lhone =
   \override TupletBracket.bracket-visibility = ##f
   \override TupletNumber.text = ""
   \partial 4 r4|%lh
-  \tuplet 12/8 {e,8^4 b,^4([gis^2 b^1 gis^2 b,^4]) e,^4 b,([fis a fis b,])}|%lh1
+  \tuplet 12/8 {e,8_.^4 b,^4([gis^2 b^1 gis^2 b,^4]) e,_.^4 b,([fis a fis b,])}|%lh1
   \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh2
   \tuplet 12/8 {dis,8 b,[fis a fis b,] dis, b,[fis a fis b,]}|%lh3
   \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh4
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh5
   \tuplet 12/8 {e,8 b,[e gis e b,] cis_^ ais[cis' e' cis' ais]}|%lh6
-  \tuplet 12/8 {c8[a cis' e' cis' a] gis,[fis b dis' b fis]}|%rh|%lh7
+  \tuplet 12/8 {c8[a cis' e' cis' a] b,[fis b dis' b fis]}|%rh|%lh7
   \tuplet 12/8 {e8[gis b e' b gis]} e4 r|%lh8
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh9
   \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh10
@@ -120,9 +123,9 @@ lhone =
   \tuplet 12/8 {e8[fis ais cis' ais fis] e[fis a dis' a fis]}|%lh34
   \tuplet 12/8 {e8[gis b e' b gis] cis[e ais] b,[dis a]}|%lh35
   \tuplet 12/8 {e8[gis b e' b gis] e[b d' e' d' b]}|%lh36
-  \tuplet 12/8 {e8[a c' e' cis' a] e[a c' e' c' a]}|%lh37
+  \tuplet 12/8 {e8[a cis' e' cis' a] e[a c' e' c' a]}|%lh37
   \tuplet 12/8 {e8[gis b e' b gis] e[g b e' b g]}|%lh38
-  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' a] g[b cis' e' cis' b]}} \\ {\stemUp fis2 g}>>|%lh39
+  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' ais] g[b cis' e' cis' b]}} \\ {\stemUp fis2 g}>>|%lh39
   <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' ais] b,[fis a]} dis'4} \\ {\stemUp fis2 s2}>>|%lh40
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh41
   \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh42
@@ -161,10 +164,10 @@ rhtwo =
   <<{e'8[dis fis ais,] cis[b a' gis]} \\ {<fis, dis>4 <e cis>_\markup{\lower #3 rit.} <fis dis> s4}>>|%rh14
   fis2 dis'4. cis8|%rh15
   \stemUp
-  \grace{ais16(b cis} b2\startTrillSpan) s2|%rh16
+  \grace{ais16(b cis)} b1\startTrillSpan|%rh16
   b2. \grace{ais16\stopTrillSpan b} gis8[a]|%rh17
-  <<{b4 cis8[dis] e4 e8[fis]} \\ {\change Staff = "lh" s8 e,,2 s4.}>>|%rh18
-  <<{fis''8[gis16 fis] e8[fis] gis r <cis, gis>16[b8.]} \\ {s4 s e, s} \\ {s8 \change Staff = "lh" \stemDown <fis, dis>2 s4.}>>|%rh19
+  <<{b4 cis8[dis] e4 e8[fis]} \\ {\change Staff = "lh" e,,1}>>|%rh18
+  <<{fis''8[gis16 fis] e8[fis] gis r <cis, gis>16[b8.]} \\ {s4 s e, s} \\ {\change Staff = "lh" \stemDown <fis, dis>1}>>|%rh19
   }
 }
 
