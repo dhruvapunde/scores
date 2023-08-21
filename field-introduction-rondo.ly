@@ -149,6 +149,22 @@ rhtwo =
     <<{fis'8[dis b a] a[gis cis b]} \\ {a4 fis s e~\>}>>|%rh2
     <<{b'8[a] cis([b]) a([gis]) a([gis])} \\ {e4\! dis e s}>>|%rh3
     <gis cis,>8\p[fis] <gis ais,>[e] <gis e b>[<fis dis> <gis e> <a fis>]|%rh4
+    <<{b4 \grace{cis16 b} ais8[b] e4 fis8[e]} \\ {gis,2 a4 a~\>}>>|%rh5
+    <<{dis4 e8\>[dis]\! cis4 dis8[cis]} \\ {a4\! gis2 fis4~\>}>>|%rh6
+  <<{b4 cis8[b] b[a] a[gis]} \\ {fis4\! e dis e}>>|%rh7
+  <gis e cis>8[fis] <cis' dis,>[b] e,4
+  fis8[fis]|%rh9
+  \grace{cis'8(} b8)^(^[ais b cis] ais^[b cis dis])|%rh10
+  <<{\grace{fis8_(} e8)[dis e fis] dis4 fis,8[fis]} \\ {ais2(b4) dis,}>>|%rh11
+  <<{a'8[gis e' ais,] cis[b fis fis]} \\ {e4 cis s2}>>|%rh12
+  <<{g'8[g e' ais,] cis[b cis cis]} \\ {dis,4 cis dis e}>>|%rh13
+  <<{e'8[dis fis ais,] cis[b a' gis]} \\ {<fis, dis>4 <e cis>_\markup{\lower #3 rit.} <fis dis> s4}>>|%rh14
+  fis2 dis'4. cis8|%rh15
+  \stemUp
+  \grace{ais16(b cis} b2\startTrillSpan) s2|%rh16
+  b2. \grace{ais16\stopTrillSpan b} gis8[a]|%rh17
+  <<{b4 cis8[dis] e4 e8[fis]} \\ {\change Staff = "lh" s8 e,,2 s4.}>>|%rh18
+  <<{fis''8[gis16 fis] e8[fis] gis r <cis, gis>16[b8.]} \\ {s4 s e, s} \\ {s8 \change Staff = "lh" \stemDown <fis, dis>2 s4.}>>|%rh19
   }
 }
 
@@ -160,6 +176,26 @@ lhtwo =
   <dis' b>2 \clef "bass" <e' e>4 a8[gis]|%lh2
   fis4 b e cis'8[b]|%lh3
   ais4 fis b, r|%lh4
+  \clef "treble"
+  <e'^~ d'>2 <e' cis'>4 c'~|%lh5
+  c'4 b2 a4~|%lh6
+  a4 gis \clef "bass" <a fis> <b e>|%lh7
+  a4 <a fis b,> <gis e> \bar "||"%lh8
+  r4|%lh9
+  \stemDown
+  \change Staff = "rh" dis'8[cis' dis' e'] <e' cis'>[<dis' b> \change Staff = "lh" <cis' ais> <b gis>]|%lh10
+  \stemNeutral
+  <cis' fis>2 <dis' b>4 b~|%lh11
+  b2 \change Staff = "rh" dis'4 b_(|%lh12
+  \change Staff = "lh" b2) s4 ais|%lh13
+  \override TextSpanner.bound-details.left.text = "rit."
+  \override TextSpanner.padding = #3
+  b4 s s <d' b eis>\startTextSpan|%lh14
+  <dis' b fis>2 <e' ais fis>\stopTextSpan|%lh15
+  \change Staff = "rh" <dis' b>4_\markup{\bold{a Tempo.}} q8[<e' cis'>] <fis' dis'>4 q8[<gis' e'>]|%lh16
+  <fis' dis'>8[<e' cis'> <dis' b> \stemNeutral \change Staff = "lh" <cis' a>_\markup{dim.}] <b gis>[<a fis> <gis e> <a fis>]|%lh17
+  gis8[b \change Staff = "rh" e' \change Staff = "lh" b] gis8[b \change Staff = "rh" e' \change Staff = "lh" b]|%lh18
+  a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e> r <cis' eis>4|%lh19
 }
 
 \score
