@@ -11,7 +11,7 @@
   print-all-headers = ##t
 }
 
-righthand =
+rhone =
 {
   \relative c''
   {
@@ -45,7 +45,7 @@ righthand =
     <<{dis16[fis8.~] fis2 gis,8.[a16]} \\ {b2. s4}>>|%rh24
     b4 gis'8.^\turn[a16] cis8[b cis, dis]|%rh25
     e4 \grace{dis16(e fis} e2^\trill) dis8.[e16]|%rh26
-    fis4 \grace{e8(} dis8.)[cis16] b4 \grace{cis8_5(b ais b_1 cis dis e_1 fis gis a_1 ais b} cis8)[r16 b]|%rh27
+    <<{s4 s4. \tuplet 12/1 {\override TupletBracket.bracket-visibility = ##f \override TupletNumber.text = "" \magnifyMusic 0.60{cis8_5_([b ais b_1 cis dis e_1 fis gis a_1 ais b])}} s8} \\ {fis4 \grace{\once \stemUp e8(} dis8.)[cis16] b4 cis'8[r16 b]}>>|%rh27
     fisis4 gis r gis8.[a16]|%rh28
     b2~ b8[bis cis dis]|%rh29
     e4 e,2 dis8.[cis16]|%rh30
@@ -66,6 +66,10 @@ righthand =
     <b a dis,>2. <cis a e>8.[<dis a fis>16]|%rh45
     <e gis, e>2._\markup{\lower #3 dim.} gis,8.[a16]|%rh46
     <b a dis,>2. <cis a e>8.[<dis a fis>16]|%rh47
+    <e gis, e>4\pp gis,8._\markup{\lower #3 {à Gauche}}[a16] <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh48
+    <e gis, e>4 gis,8.[a16] <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh49
+    q1|%rh50
+    r2 r4^\fermata%rh51
   }
 }
 
@@ -75,7 +79,7 @@ tupvisibility =
   \override TupletNumber.text = ""
 }
 
-lefthand =
+lhone =
 {
   \override TupletBracket.bracket-visibility = ##f
   \override TupletNumber.text = ""
@@ -104,6 +108,35 @@ lefthand =
   \tuplet 12/8 {b,8[cis fis a fis c] b,[dis a b a dis]}|%lh22
   \tuplet 12/8 {b,8[e g b g e] b,[g cis' e' cis' g]}|%lh23
   \tuplet 12/8 {b,8[a b dis' b fis]} a4 r|%lh24
+  \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh25
+  \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh26
+  \tuplet 12/8 {dis,8 b,[fis a fis b,] dis,[b, fis a fis b,]}|%lh27
+  \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh28
+  \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh29
+  \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh30
+  \tuplet 12/8 {b,8 fis[b e' b fis] b,[fis a]} dis'4|%lh31
+  <<{\tupvisibility \stemDown \tuplet 12/8 {e,8[e b e' b gis] e[b d' e' d' b]}} \\ {\stemUp s2 e}>>|%lh32
+  \tuplet 12/8 {e8[a cis' e' c' a] e[gis b e' b g]}|%lh33
+  \tuplet 12/8 {e8[fis ais cis' ais fis] e[fis a dis' a fis]}|%lh34
+  \tuplet 12/8 {e8[gis b e' b gis] cis[e ais] b,[dis a]}|%lh35
+  \tuplet 12/8 {e8[gis b e' b gis] e[b d' e' d' b]}|%lh36
+  \tuplet 12/8 {e8[a c' e' cis' a] e[a c' e' c' a]}|%lh37
+  \tuplet 12/8 {e8[gis b e' b gis] e[g b e' b g]}|%lh38
+  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' a] g[b cis' e' cis' b]}} \\ {\stemUp fis2 g}>>|%lh39
+  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' ais] b,[fis a]} dis'4} \\ {\stemUp fis2 s2}>>|%lh40
+  \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh41
+  \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh42
+  \tuplet 12/8 {b,8 fis[b e' b fis] b,[fis b] dis' r r}|%lh43
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh44
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh45
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh46
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh47
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh48
+    \override TextSpanner.bound-details.left.text = "rit."
+    \override TextSpanner.padding = #3
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,\startTextSpan[b, e,] b,[e, b,]}|%lh49
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]\stopTextSpan}|%lh50
+  r2 r4^\fermata \bar "|."%lh51
 }
 
 \score
@@ -123,14 +156,14 @@ lefthand =
       \clef "treble"
       \key e \major
       \time 4/4
-      \righthand
+      \rhone
     }
     \new Staff = "lh"
     {
       \clef "bass"
       \key e \major
       \time 4/4
-      \lefthand
+      \lhone
     }
   >>
 }
