@@ -192,6 +192,11 @@ rhtwo =
   a4 cis, dis a|%rh38
   b8[cis16 dis] e[fis gis a] b8[e, e'8. e16]|%rh39
   e8[e, e'8. e16] e8[<b b,> dis,8. dis16]|%rh40
+  e,8[fis16 gis] \stemUp a[b cis dis] e8[b cis gis]|%rh41
+  \stemNeutral
+  ais8[b16 cis] dis[e fis gis] ais8[cis, dis ais]|%rh42
+  b8[cis16 dis] e[fis gis a] b4 <e b e,>|%rh43
+  <e ais, e>4 <d b eis, d> r^\fermata \p \crossStaff fis,,8[fis]
   }
 }
 
@@ -233,9 +238,21 @@ lhtwo =
   <gis e>8[<b gis e> q q] <b gis>[q q q]|%lh26
   <<{<b gis>8[q q q] <bis gis>[q q q]} \\ {e4 r e r}>>|%lh27
   <<{<cis' a>8[q q q] <c' a>[q q q]} \\ {e4 r e r}>>|%lh28
-  c1-\markup{HERE}
+  <<{<b a fis>8[q q q] q[q q q]} \\ {e4 r e r}>>|%lh29
   <<{<b gis>8[q q q] q[q q q]} \\ {e4 r r2}>>|%lh30
-  <<{<b gis>8[q q q] <d' b>[ q q q]} \\ {e4 r e r}>>|%lh31
+  <<{<b gis>8[q q q] <d' b>[q q q]} \\ {e4 r e r}>>|%lh31
+  <<{<cis' ais>8[q q q] <c' a>[q q q]} \\ {e4 r e r}>>|%rh32
+  <<{<b a fis>8[q q q] q[q q q]} \\ {e4 r e r}>>|%rh33
+  <b gis e>8[<b gis> q q] q[q q q]|%rh34
+  <<{<b gis>8[q q q] <cis' gis>[q q q]} \\ {e4 r e r}>>|%rh35
+  <<{<cis' a>8[q q q] q[q q q]} \\ {fis4 r r2}>>|%rh36
+  <<{<cis' a>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%rh37
+  <<{<dis' b>8[q q q] <e' dis' b>[q q q]} \\ {gis4 r gis r}>>|%rh38
+  <e' cis' a>4 <a e a,> <gis e b,> <a fis b,>|%rh39
+  <<{s2 <cis' gis>8[q q q]} \\ {<gis e>8[<b gis> q q] e4 r}>>|%rh40
+  <<{<cis' ais>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%rh41
+  <dis' b gis>8[<dis' b> q q] <dis' b gis>4 <e' b g>|%rh42
+  <<{\autoBeamOff s2. \crossStaff <ais fis>8 \crossStaff <b g>} \\ {<e' cis' ais fis>4 <e' dis' b g> r^\fermata r}>>|%rh43
 }
 
 \score
@@ -294,4 +311,11 @@ lhtwo =
       \lhtwo
     }
   >>
+  \layout
+  {
+    \context
+    {
+      \PianoStaff \consists "Span_stem_engraver"
+    }
+  }
 }
