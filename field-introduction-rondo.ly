@@ -168,6 +168,30 @@ rhtwo =
   b2. \grace{ais16\stopTrillSpan b} gis8[a]|%rh17
   <<{b4 cis8[dis] e4 e8[fis]} \\ {\change Staff = "lh" e,,1}>>|%rh18
   <<{fis''8[gis16 fis] e8[fis] gis r <cis, gis>16[b8.]} \\ {s4 s e, s} \\ {\change Staff = "lh" \stemDown <fis, dis>1}>>|%rh19
+  <b' fis>16[a8.] <cis fis,>16[b8.] a16[gis8.]a8\>[gis]\!|%rh20
+  <gis cis,>8[fis] <gis ais,>[e] <gis e ais,>[<fis dis b>] <gis e>[<a fis>]|%rh21
+  <<{b4\> ais8\![b] e4 dis8[e]} \\ {gis,2 ais2}>>|%rh22
+  <<{fis'8[gis16 fis] e8_\markup{\lower #3 ritard.}[fis] b4^\fermata <cis, gis d>16\p[b8.]} \\ {a!4 cis d s}>>|%rh23
+  <<{b16[a8.] cis16[b8.] a16[gis8.] b16[a8.]} \\ {fis4 fis e e}>>|%rh24
+  <<{<a e cis>16[fis8.] r4 a4.^\>gis8\!} \\ {s2 dis2}>>|%rh25
+  e8\p([fis16 gis] a[b cis dis] \stemDown e8)[fis^. gis^. a^.]|%rh26
+  \stemNeutral
+  b4 b, e gis,|%rh27
+  cis4 ais r8 r16 fis gis[fis eis fis]|%rh28
+  a4 dis, r8 dis[cis' b]|%rh29
+  e,8[fis16 gis]\stemUp a[b cis dis] \stemDown e8[fis gis a]|%rh30
+  \stemNeutral
+  b4 b, e gis,|%rh31
+  cis4 ais r8 r16 fis gis[fis eis fis]|%rh33
+  a4 dis, r8 dis[cis' b]|%rh34
+  e,8[fis16 gis]\stemUp a[b cis dis] \stemDown e8[fis gis a]|%rh35
+  \stemNeutral
+  b4 b, e gis,|%rh36
+  a16([fis gis a] \stemDown b[cis dis eis] fis8)[eis fis gis]|%rh37
+  \stemNeutral
+  a4 cis, dis a|%rh38
+  b8[cis16 dis] e[fis gis a] b8[e, e'8. e16]|%rh39
+  e8[e, e'8. e16] e8[<b b,> dis,8. dis16]|%rh40
   }
 }
 
@@ -199,6 +223,19 @@ lhtwo =
   <fis' dis'>8[<e' cis'> <dis' b> \stemNeutral \change Staff = "lh" <cis' a>_\markup{dim.}] <b gis>[<a fis> <gis e> <a fis>]|%lh17
   gis8[b \change Staff = "rh" e' \change Staff = "lh" b] gis8[b \change Staff = "rh" e' \change Staff = "lh" b]|%lh18
   a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e> r <cis' eis>4|%lh19
+  <cis' fis>4 <b dis> <b e> cis'8[b]|%lh20
+  ais4 fis b, r|%lh21
+  \clef "treble"
+  <e' d'>2 <e' cis'>|%lh22
+  <dis' c'>4 <dis' a> <eis' gis>^\fermata \clef "bass" eis|%lh23
+  <cis fis>4 <b dis> <b e> <e cis>|%lh24
+  <a a,>4 r <a fis b,>2|%lh25
+  <gis e>8[<b gis e> q q] <b gis>[q q q]|%lh26
+  <<{<b gis>8[q q q] <bis gis>[q q q]} \\ {e4 r e r}>>|%lh27
+  <<{<cis' a>8[q q q] <c' a>[q q q]} \\ {e4 r e r}>>|%lh28
+  c1-\markup{HERE}
+  <<{<b gis>8[q q q] q[q q q]} \\ {e4 r r2}>>|%lh30
+  <<{<b gis>8[q q q] <d' b>[ q q q]} \\ {e4 r e r}>>|%lh31
 }
 
 \score
