@@ -196,7 +196,9 @@ rhtwo =
   \stemNeutral
   ais8[b16 cis] dis[e fis gis] ais8[cis, dis ais]|%rh42
   b8[cis16 dis] e[fis gis a] b4 <e b e,>|%rh43
-  <e ais, e>4 <d b eis, d> r^\fermata \p \crossStaff fis,,8[fis]
+  <e ais, e>4 <d b eis, d> r^\fermata \p \crossStaff fis,,8[fis]|%rh44
+  <fis cis>8[fis] fis[<fis cis>] <fis dis b>[fis] <fis cis>[<gis dis b>]|%rh45
+  <<{fis2. fis'8.[fis16]} \\ {<e, cis>4. \stemUp \change Staff = "lh" <cis ais>8 <ais fis>4 s}>>|%rh46
   }
 }
 
@@ -241,18 +243,20 @@ lhtwo =
   <<{<b a fis>8[q q q] q[q q q]} \\ {e4 r e r}>>|%lh29
   <<{<b gis>8[q q q] q[q q q]} \\ {e4 r r2}>>|%lh30
   <<{<b gis>8[q q q] <d' b>[q q q]} \\ {e4 r e r}>>|%lh31
-  <<{<cis' ais>8[q q q] <c' a>[q q q]} \\ {e4 r e r}>>|%rh32
-  <<{<b a fis>8[q q q] q[q q q]} \\ {e4 r e r}>>|%rh33
-  <b gis e>8[<b gis> q q] q[q q q]|%rh34
-  <<{<b gis>8[q q q] <cis' gis>[q q q]} \\ {e4 r e r}>>|%rh35
-  <<{<cis' a>8[q q q] q[q q q]} \\ {fis4 r r2}>>|%rh36
-  <<{<cis' a>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%rh37
-  <<{<dis' b>8[q q q] <e' dis' b>[q q q]} \\ {gis4 r gis r}>>|%rh38
-  <e' cis' a>4 <a e a,> <gis e b,> <a fis b,>|%rh39
-  <<{s2 <cis' gis>8[q q q]} \\ {<gis e>8[<b gis> q q] e4 r}>>|%rh40
-  <<{<cis' ais>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%rh41
-  <dis' b gis>8[<dis' b> q q] <dis' b gis>4 <e' b g>|%rh42
-  <<{\autoBeamOff s2. \crossStaff <ais fis>8 \crossStaff <b g>} \\ {<e' cis' ais fis>4 <e' dis' b g> r^\fermata r}>>|%rh43
+  <<{<cis' ais>8[q q q] <c' a>[q q q]} \\ {e4 r e r}>>|%lh32
+  <<{<b a fis>8[q q q] q[q q q]} \\ {e4 r e r}>>|%lh33
+  <b gis e>8[<b gis> q q] q[q q q]|%lh34
+  <<{<b gis>8[q q q] <cis' gis>[q q q]} \\ {e4 r e r}>>|%lh35
+  <<{<cis' a>8[q q q] q[q q q]} \\ {fis4 r r2}>>|%lh36
+  <<{<cis' a>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%lh37
+  <<{<dis' b>8[q q q] <e' dis' b>[q q q]} \\ {gis4 r gis r}>>|%lh38
+  <e' cis' a>4 <a e a,> <gis e b,> <a fis b,>|%lh39
+  <<{s2 <cis' gis>8[q q q]} \\ {<gis e>8[<b gis> q q] e4 r}>>|%lh40
+  <<{<cis' ais>8[q q q] <dis' a>[q q q]} \\ {fis4 r fis r}>>|%lh41
+  <dis' b gis>8[<dis' b> q q] <dis' b gis>4 <e' b g>|%lh42
+  <<{\autoBeamOff s2. \crossStaff <ais fis>8 \crossStaff <b g>} \\ {<e' cis' ais fis>4 <e' dis' b g> r^\fermata r}>>|%lh43
+  <<{<fis, fis,,>4 g,\rest q g,\rest} \\ {\autoBeamOff \stemUp \crossStaff ais8 s \crossStaff <b gis> \crossStaff ais s4 \crossStaff ais8 s}>>|%lh44
+  fis,8 \stemDown <cis ais,>[<e cis> <cis ais,>] <e cis>[<cis ais,>] <e cis>4|%lh45
 }
 
 \score
