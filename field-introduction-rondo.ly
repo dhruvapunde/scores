@@ -198,7 +198,10 @@ rhtwo =
   b8[cis16 dis] e[fis gis a] b4 <e b e,>|%rh43
   <e ais, e>4 <d b eis, d> r^\fermata \p \crossStaff fis,,8[fis]|%rh44
   <fis cis>8[fis] fis[<fis cis>] <fis dis b>[fis] <fis cis>[<gis dis b>]|%rh45
-  <<{fis2. fis'8.[fis16]} \\ {<e, cis>4. \stemUp \change Staff = "lh" <cis ais>8 <ais fis>4 s}>>|%rh46
+  <<{fis2. \stemDown fis'8.[fis16]} \\ {<e, cis>4. \stemUp \change Staff = "lh" <cis ais>8 <ais fis>4 s}>>|%rh46
+  fis''4.(eis8 e[dis cis b]|%rh47
+  bis4) cis2^^ \crossStaff{fis,8[fis]}|%rh48
+  \crossStaff <fis cis>8[fis] fis[<fis cis>] <fis dis b>[fis] <fis cis>[<fis dis b>]|%rh49
   }
 }
 
@@ -257,6 +260,14 @@ lhtwo =
   <<{\autoBeamOff s2. \crossStaff <ais fis>8 \crossStaff <b g>} \\ {<e' cis' ais fis>4 <e' dis' b g> r^\fermata r}>>|%lh43
   <<{<fis, fis,,>4 g,\rest q g,\rest} \\ {\autoBeamOff \stemUp \crossStaff ais8 s \crossStaff <b gis> \crossStaff ais s4 \crossStaff ais8 s}>>|%lh44
   fis,8 \stemDown <cis ais,>[<e cis> <cis ais,>] <e cis>[<cis ais,>] <e cis>4|%lh45
+  \stemUp
+  b,,8 fis,[<dis b,> fis,] q[fis, q] r|%lh46
+  <<{fis,,8 fis,[<e ais,> fis,] q4 g,\rest} \\ {s2. \autoBeamOff \stemUp \crossStaff <ais fis>8 \crossStaff <b gis>}>>|%lh47
+  <<{\autoBeamOff \crossStaff <ais fis,>4 \crossStaff <b gis>8 \crossStaff ais fis,4 \crossStaff ais} \\ {s4 g,\rest s g,\rest}>>|%lh48
+  \stemNeutral
+  fis,2 <b, b,,>4 r|%lh49
+  <gis, gis,,>4 <b gis dis> <cis cis,> <eis' b gis>|%lh50
+  <fis fis,>4 <cis' fis> q r|%lh51
 }
 
 \score
