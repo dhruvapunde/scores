@@ -202,6 +202,101 @@ rhtwo =
   fis''4.(eis8 e[dis cis b]|%rh47
   bis4) cis2^^ \crossStaff{fis,8[fis]}|%rh48
   \crossStaff <fis cis>8[fis] fis[<fis cis>] <fis dis b>[fis] <fis cis>[<fis dis b>]|%rh49
+  <<{fis2~ <fis dis b>4 \stemDown <dis'' b>16[<cis ais>8.]} \\ {<e,, cis>4. <cisis a>8 s2}>>|%rh50
+  <cis'' ais>16[<b gis>8.] q16[<ais fisis>8.] <cis ais>16[<b gis>8.] <ais fisis>16[<gis eis>8.]|%rh51
+  \stemUp
+  \grace{gis8(} fis8.)[eis16 <fis ais,>8. gis16] <fis ais,>4 <a, cis, a>8[<a d, b>]|%rh52
+  \fixed c'{<a e c>4 <a d b,>8[<a e cis>] <a fis dis>4 <a e cis>8[<a fis d>]}|%rh53
+  <<{a2. \stemDown fis'8[gis]} \\ {<g, e>4. <e cis>8 s2}>>|%rh54
+  \stemNeutral
+  a'4 b8[cis] d[e16 d] cis8[d]|%rh55
+  dis4 e2 \fixed c'{<a cis a,>8[<a d b,>]}|%rh56
+  \fixed c'{<a e cis>8[a] <a d b,>[<a e cis>] <a fis d>[a] <a e cis>[<a fis d>]}|%rh57
+  <<{ais,,2\p(b4) cis,8[dis]} \\ {\fixed c'{<gis e>4 <fis d>8[<e cis>] <d b,>4} s4}>>|%rh58
+  \fixed c'{dis4 d8[e] <fis d b,>4 <fis cis ais,>}|%rh59
+  r4 cisis'16([dis e dis] cis[b ais b] cisis[dis fis e])|%rh60
+  dis16([cis b cis] dis[e dis cis] b[ais gis fis] eis[fis gis ais])|%rh61
+  b4 cisis16[dis e dis] cis[b ais^\>b\!] b'[ais gis fis]|%rh62
+  fis16[e e dis] dis[cis cis bis] dis[cis b ais] gis[fis gis ais]|%rh62
+  b4 cisis16[dis e dis] cis[b ais b] cisis[dis fis e]|%rh63
+  dis16[cis bis cis] dis[e fis e] dis[cis bis cis] dis[e gis fis]|%rh63
+  e16[dis cisis dis] e[eis gis fis] e[dis cisis dis] eis[fis a gis]|%rh64
+  fis16[e dis e] fisis[gis e' cis] b[ais gisis ais] b[bis dis cis]|%rh65
+  b4 cisis16[dis e dis] cis\cresc[b ais b] cisis[dis fis e]|%rh66
+  dis16[cis bis cis]
+  \ottava #1
+  \relative c'''
+  {
+    dis16[e fis e] dis[cis bis cis] dis[e gis fis]|%rh67
+    e16[dis cisis dis] eis[fis\! a gis] fis[e dis e] fisis[gis b a]|%rh68
+    gis16\p[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh69
+    gis16[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh70
+    gis16[fis eis fis] gis_\markup{\lower #3 dim.}[a b a] gis[fis eis fis] gis[a b a]|%rh71
+    gis16[fis eis fis] gis[a b a] fisis\>[gis a gis] eis[fis gis fis]\!|%rh72
+    dis16[e fis e]\p dis[e fis e] cisis[dis e dis] bis[cis dis e]|%rh73
+  }
+  \ottava #0
+  ais16[b cis b] ais[b cis b] gis[a b a] fisis[gis a gis]|%rh74
+  eis16[fis gis fis] dis[e fis e] cisis[dis e dis] bis[cisis dis cisis]|%rh75
+  \grace{ais16 b cis} b1\startTrillSpan\<|%rh76
+  b2.\! \grace{ais16 b} gis8\stopTrillSpan \p[a]|%rh77
+  <<{b4 cis8[dis] e4 dis8[e]} \\ {\change Staff = "lh" e,,1}>>|%rh78
+  <<{fis''4 e8[fis] gis4 <cis, gis>16[b8.]} \\ {s2 \crossStaff e,4 s} \\ {\change Staff = "lh" <fis, dis>1}>>|%rh79
+  \fixed c'
+  {
+    <b fis>16[a8.] <cis' fis>16[b8.] <a e>16[gis8.] a8[gis]|%rh80
+    <gis cis>8[fis gis e] <gis e>[<fis dis> <gis e> <a fis>]|%rh81
+    <<{b4 ais8[b] e'4 fis'8[e']} \\ {gis2 a4 a~}>>|%rh82
+    <<{dis'4 e'8[dis'] cis'4 dis'8[cis']} \\ {a4 gis2 fis4~}>>|%rh82
+    <<{b4 cis'8[b] b[a] a[gis]} \\ {fis4 e dis e}>>|%rh83
+    <<{gis8[fis gis e] gis[fis] b[a]} \\ {cis4 s <dis b,> fis}>>|%rh83
+    <<{a8[gis a fis] a[gis] cis'[b]} \\ {dis4 bis, cis gis}>>|%rh84
+    <<{b8[a b gis] b[a] fis'[e']} \\ {eis4 cis fis <a_~ fis_~ c>_(}>>|%rh85
+    <<{e'8[dis'] dis'[cis'] b[a gis fis]} \\ {<a fis b,>)}>>|%rh86
+    fis8[e fis e] e[dis] \bar "||"
+  }
+  \key c \major
+  c'8\p[c]|%rh88
+  c4 r r c8[c]|%rh89
+  c4 r r e'8[e]|%rh90
+  f8[e dis e] g[f a, d]|%rh91
+  c8[b a b] c4 e8[e]|%rh92
+  dis2.^^ e8[e]|%rh93
+  dis2 e4 b,8[b]|%rh94
+  a2. b8[b]|%rh95
+  a2. fis''8[fis]|%rh96
+  g8[fis eis fis] a[g b, eis] \bar "||"%rh97
+  \key d \major
+  d8[cis bis cis] d4 fis8[fis]|%rh98
+  eis2 fis4 fis8[fis]|%rh99
+  eis2 fis4 cis8[cis]|%rh99
+  b2. d8[d]|%rh100
+  cis2. b8[b] \bar "||"%rh101
+  \key e \major
+  a'8[gis fisis gis] b[a cis, fisis]|%rh102
+  e8[dis cisis dis] fis[e dis cis]|%rh103
+  <<{cis8[b ais b] cis[b a fis]} \\ {<a fis>2 <gis e>4 s}>>|%rh104
+  e2 dis4 gis'8[gis]|%rh105
+  a8[gis fisis gis] cis[a cis, fisis]|%rh106
+  \stemUp
+  \override Script.padding = #1
+  b,4~ b8.[dis,16] \afterGrace dis2^\trill {cisis16 dis}|%rh107
+  \revert Script.padding
+  e4. b'8 a[gis fis e]|%rh108
+  \stemNeutral
+  a4. fis'8 e[dis cis b]|%rh109
+  e16[fis e dis] e[fis gis a] ais[b cis b] a[gis fis e]|%rh110
+  a16[b a gis] a[b cis dis]
+  \ottava #1
+  \relative c'''
+  {
+    e[eis gis fis] e[dis cis b]|%rh111
+    e16[fis e dis] e[fis gis a] ais[b ais b] a[gis fis e]|%rh112
+    a4~\>a16\![gis fis e] dis[cis c b] ais[a gis fis]|%rh113
+  }
+  \ottava #0
+  e,4^\markup{Loco.} fisis16^^[gis a gis] fis[e dis e] fisis^^[gis a gis]|%rh114
+  fis16[e dis e] fisis^^[gis a gis] fisis^^[gis a gis] fisis^^[gis a gis]|%rh115
   }
 }
 
@@ -230,7 +325,8 @@ lhtwo =
   b4 s s <d' b eis>\startTextSpan|%lh14
   <dis' b fis>2 <e' ais fis>\stopTextSpan|%lh15
   \change Staff = "rh" <dis' b>4_\markup{\bold{a Tempo.}} q8[<e' cis'>] <fis' dis'>4 q8[<gis' e'>]|%lh16
-  <fis' dis'>8[<e' cis'> <dis' b> \stemNeutral \change Staff = "lh" <cis' a>_\markup{dim.}] <b gis>[<a fis> <gis e> <a fis>]|%lh17
+  <fis' dis'>8[<e' cis'> <dis' b> \change Staff = "lh" <cis' a>_\markup{dim.}] <b gis>[<a fis> <gis e> <a fis>]|%lh17
+  \stemNeutral
   gis8[b \change Staff = "rh" e' \change Staff = "lh" b] gis8[b \change Staff = "rh" e' \change Staff = "lh" b]|%lh18
   a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e> r <cis' eis>4|%lh19
   <cis' fis>4 <b dis> <b e> cis'8[b]|%lh20
@@ -268,6 +364,86 @@ lhtwo =
   fis,2 <b, b,,>4 r|%lh49
   <gis, gis,,>4 <b gis dis> <cis cis,> <eis' b gis>|%lh50
   <fis fis,>4 <cis' fis> q r|%lh51
+  <a, a,,>4 r q r|%lh52
+  <a, a,,>8 <e cis>8[<g e> <e cis>] <cis' a>[<g e>] r4|%lh53
+  d,8 a,[<fis dis> a,] q[a,] <fis dis> r|%lh54
+  a,,8 a,[<g cis> a,] <gis cis>4 r|%lh55
+  <a a,>4 r q r|%lh56
+  <fis fis,>2 <g g,>4 cis8[dis]|%lh57
+  <<{e4 d8[e] <fis fis,>4 q} \\ {s8 gis,2 s4.} \\ {s8 b2 s4.}>>|%lh58
+  b,8 <dis' fis>[<b dis>] r b, <dis' fis>[<b dis>] r|%lh59
+  b,8 <cis' e>[<ais cis>] r b, <cis' e>[<ais cis>] r|%lh60
+  b,8 <dis' fis>[<b dis>] r b, <dis' fis>[<b dis>] r|%lh61
+  b,8 <cis' e>[<ais cis>] r b, <cis' e>[<a cis>] r|%lh62
+  b,8 <dis' fis>[<b dis>] r b, <dis' fis>[<b dis>] r|%lh63
+  b,8 <cis' e>[<ais cis>] r b, <cis' e>[<ais cis>] r|%lh64
+  b,8 <fis' a>[<dis' fis>] r b, <fis' a>[<dis' fis>] r|%lh65
+  b,8 <gis' b>[<e' gis>] r b, <e' ais>[<cis' g>] r|%lh66
+  b,8 <dis' fis>[<b dis> <dis' fis>] b, <dis' fis>[<b dis> <dis' fis>]|%lh67
+  b,8 <cis' e>[<ais cis> <cis' e>] b, <cis' e>[<ais cis> <cis' e>]|%lh68
+  b,8 <fis' a>[<dis' fis> <fis' a>] b, <gis' b>[<e' gis> <gis' b>]|%lh69
+  b,8 r <a^~ fis^~ e c>4 <a fis d b,>8 r \clef "treble" <a'^~ fis'_~ e' c'>4|%lh70
+  <a' fis' dis' b>4 <a'' fis'' dis'' b'> r <c''' a'' fis'' e''>~_\p|%lh71
+  q8 r <c'' a' fis' e'>4~ q8 r \clef "bass" <cis' a fis e>4|%lh72
+  <b a fis dis>4 r r2|%lh73
+  \clef "treble"
+  \relative c'''
+  {
+    r4 <b gis> <a fis> <gis e>|%lh74
+    <fis dis>4 <f d> <e cis> <dis b>|%lh75
+    <cis a>4 <b gis>8[<ais g>] <a fis>4 <gis eis>8[<g e>]|%lh76
+    <fis dis>4 <dis b>8[<e cis>] <fis dis>4 <e cis>8[<fis dis>]|%lh77
+    <gis e>4 <fis dis>8[<gis e>] <a fis>4 r|%lh78
+  }
+  \clef "bass"
+  gis8_\markup{Tempo.}[b \change Staff = "rh" e' \change Staff = "lh" b] gis[b \change Staff = "rh" e' \change Staff = "lh" b]|%lh79
+  a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e>4 <cis' eis>|%lh80
+  <cis' fis>4 <b^~ dis> <b e> cis'8[b]|%lh81
+  ais4 <ais fis> <b b,> r|%lh82
+  \clef "treble"
+  <<{<e' d'>2 <e' cis'>4 c'_~} \\ {s1}>>|%lh83
+  <<{c'4 \clef "bass" b2 a4^~} \\ {s4 b,2 b,4_~}>>|%lh84
+  <<{a4 gis fis e} \\ {b,4 b,2.}>>|%lh85
+  <<{<b, b,,>1} \\ {s4 ais s2}>>|%lh86
+  <b, b,,>1|%lh87
+  q1|%lh88
+  s4 \change Staff = "rh" \stemDown fis'8[e'] dis'[cis' \change Staff = "lh" b a]|%lh89
+  <<{<b gis>4 <ais g> <a fis>} \\ {b,2}>>
+  \key c \major
+  \stemUp
+  c8[c]|%lh90
+  c8[c c c] c[c c c]|%lh91
+  c8[c c c] c[c c c]|%lh92
+  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown <g e>2 <a f>2}>>|%lh93
+  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown <f d>2 <g e>2}>>|%lh94
+  <<{\stemDown \once \hide NoteHead c8[c c c] \stemUp  c[c c c]} \\ {\stemDown <a fis>2 s2}>>|%lh95
+  <<{\stemDown \once \hide NoteHead c8[c c c] <g e c>[<g e> q q]} \\ {\stemDown <a fis>2 s2}>>|%lh96
+  \stemNeutral
+  <g e c>8[<g e> q q] <g e c>[<g e> q q]|%lh97
+  <g e cis>8[<g e> q q] <fis d>[<a fis> q q]|%lh98
+  <<{<a fis>8[q q q] <b g>[q q q]} \\ {d4 r d r}>>|%lh99
+  \key d \major
+  <<{<g e>8[q q q] <a fis>[q q q]} \\ {d4 g,\rest d r}>>|%lh100
+  <<{<b gis>8[q q q] <a fis>[q q q]} \\ {d4 r d r}>>|%lh101
+  <<{<b gis>8[q q q] <a fis>[q q q]} \\ {d4 r d r}>>|%lh102
+  <<{\stemDown \once \hide NoteHead cis8[<a fis> q q] \once \hide NoteHead cis8[q q q]} \\ {\stemDown dis2 eis2}>>|%lh103
+  <<{\stemDown \once \hide NoteHead cis8[<e' ais> q q] bis,[<fis' a> q q]} \\ {fis2 s2}>>|%lh104
+  \key e \major
+  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] a,[<cis' a> q q]} \\ {e2 s2}>>|%lh105
+  <a fis bis,>2 <gis e cis>4 <a e a,>|%lh106
+  <b d>2 <b e>4 \stemUp <cis' a,>8[a]|%lh107
+  \stemNeutral
+  <<{<b gis>4 <ais g> <a fis> \stemDown <dis' fis bis,>} \\ {b,2~ b,4 s}>>|%lh108
+  <cis' e cis>2 <a a,>|%lh109
+  <<{<b gis>2 <a fis>} \\ {b,1}>>|%lh110
+  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] \once \hide NoteHead cis[<d' b> q q]} \\ {\stemDown e2 e2}>>|%lh111
+  e8[<cis' a> q q] e[<dis' a fis> q q]|%lh112
+  e8 <gis' b>[<e' gis>] r e \clef "treble" <b' d'>[<gis' b>] r|%lh113
+  e8 <cis' e'>[<a' cis'>] r e \clef "bass" <fis' a>[<dis' fis>] r|%lh114
+  e8 <gis' b>[<e' gis>] r e \clef "treble" <b' d'>[<gis' b>] r|%lh115
+  e8 <cis'' e'>[<a' cis'>] r \clef "bass" e <fis' a>[<dis' fis>] r|%lh116
+  e8 <gis' b>[<e' gis>] r e <gis' b>[<e' gis>] r|%lh117
+  cis8 <e' gis>[<cis' e>] r cis <e' gis>[<cis' e>] r|%lh118
 }
 
 \score
