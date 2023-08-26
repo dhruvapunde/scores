@@ -1,22 +1,15 @@
 \version "2.24.2"
 
-\header
-{
-  title = "Introduction and Rondo"
-  composer = "John Field"
-}
-
-\paper
-{
-  print-all-headers = ##t
-}
-
 tupvisibility =
 {
   \override TupletBracket.bracket-visibility = ##f
   \override TupletNumber.text = ""
 }
 
+slength =
+{
+  \once \override Stem.length = #5
+}
 
 rhone =
 {
@@ -36,25 +29,26 @@ rhone =
     <e gis,>2. gis,8.[a16]|%rh8
     b4 gis'8.[a16] b4 cis,8.[dis16]|%rh9
     e4 cis'8.[dis16] e4 dis,8.[e16]|%rh10
-    fis4 \grace{e8(} dis8.)[cis16] b4 cis'8.[b16]|%rh11
+    fis4 \slashedGrace{e8(} dis8.)[cis16] b4 cis'8.[b16]|%rh11
     fisis4 gis r gis8.[a16]|%rh12
     b2~b8\<(bis cis dis)\!|%rh13
     e4 e,2 dis8.[cis16]|%rh14
     b2\p~ b8[a' fis gis]|%rh15
     e2. dis8.[e16]|%rh16
     fis16[b8.~] b2 cis8.[gis16]|%rh17
+    \pageBreak
     a2~ a8.[b32 a] gis8.[fis16]|%rh18
     <<{e2~ e8.[fis32 e] dis8.[e16]} \\ {s2 ais,2}>>|%rh19
     <<{dis16[fis8.~] fis2 b,16.[dis8]} \\ {b2. s4}>>|%rh20
     fis'16[b8.]~ b2 cis8.[gis16]|%rh21
     a2. b8[fis]|%rh22
-    <<{g4. fis8 e8.[fis32 e] dis8.[e16]} \\ {s2 ais,2}>>|%rh23
+    <<{\stemDown g4. fis8 \stemUp e8.[fis32 e] dis8.[e16]} \\ {s2 ais,2}>>|%rh23
     <<{dis16[fis8.~] fis2 gis,8.[a16]} \\ {b2. s4}>>|%rh24
     \override Script.padding = #2
     b4 \after 8.*2/3 \turn gis'8. [a16] cis8[b cis, dis]|%rh25
     e4 \grace{dis16(e fis} e2^\trill) dis8.[e16]|%rh26
     \revert Script.padding
-    <<{s4 s4. \tuplet 12/1 {\tupvisibility \magnifyMusic 0.60{cis8_5_([b ais b_1 cis dis e_1 fis gis a_1 ais b])}} s8} \\ {fis4 \grace{\once \stemUp e8(} dis8.)[cis16] b4 cis'8[r16 b]}>>|%rh27
+    <<{s4 s4. \tuplet 12/1 {\tupvisibility \magnifyMusic 0.60{cis8_5_([b ais b_1 cis dis e_1 fis gis a_1 ais b])}} s8} \\ {fis4 \slashedGrace{\once \stemUp e8(} dis8.)[cis16] b4 cis'8[r16 b]}>>|%rh27
     fisis4 gis r gis8.[a16]|%rh28
     b2~ b8[bis cis dis]|%rh29
     e4 e,2 dis8.[cis16]|%rh30
@@ -63,6 +57,7 @@ rhone =
     a2(gis4 g)|%rh33
     <<{fis2. gis8.[fis16]} \\ {s4 cis c2}>>|%rh34
     <b' b,>4 gis e \tuplet 3/2 {fis8 gis fis}|%rh35
+    \pageBreak
     e2. fis8.[gis16]|%rh36
     a4 dis8.[e16] e4 b8.[a16]|%rh37
     gis2 <g g,>|%rh38
@@ -79,6 +74,7 @@ rhone =
     <e gis, e>4 gis,8.[a16] <b a dis,>4 <cis a e>8.[<dis a fis>16]|%rh49
     q1|%rh50
     r2 r4^\fermata%rh51
+    \pageBreak
   }
 }
 
@@ -87,7 +83,7 @@ lhone =
   \override TupletBracket.bracket-visibility = ##f
   \override TupletNumber.text = ""
   \partial 4 r4|%lh
-  \tuplet 12/8 {e,8_.^4 b,^4([gis^2 b^1 gis^2 b,^4]) e,_.^4 b,([fis a fis b,])}|%lh1
+  \tuplet 12/8 {e,8_.^5 b,^4([gis^2 b^1 gis^2 b,^4]) e,_.^5 b,([fis a fis b,])}|%lh1
   \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh2
   \tuplet 12/8 {dis,8 b,[fis a fis b,] dis, b,[fis a fis b,]}|%lh3
   \tuplet 12/8 {e,8 b,[e gis e b,] e, b,[e gis e b,]}|%lh4
@@ -102,7 +98,7 @@ lhone =
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh13
   \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh14
   \tuplet 12/8 {b,8 fis[b e' b gis] b, fis[b dis' b a]}|%lh15
-  <<{\tupvisibility \stemDown \tuplet 12/8 {e8[gis b e' b gis] e4 d\rest}} \\ {\stemUp e2 s2}>>|%lh16
+  <<{\tupvisibility \stemDown \tuplet 12/8 {\once \hide NoteHead e8[gis b e' b gis] e4 d\rest}} \\ {\stemDown \slength e2 s2}>>|%lh16
   \tuplet 12/8 {b,,8 dis[fis b fis dis] b, eis[gis cis' gis eis]}|%lh17
   \tuplet 12/8 {b,8 [fis a cis' a fis] b,[dis a c' a dis]}|%lh18
   \tuplet 12/8 {b,8[e gis b gis e] b,[g cis' e' cis' g]}|%lh19
@@ -118,15 +114,15 @@ lhone =
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh29
   \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh30
   \tuplet 12/8 {b,8 fis[b e' b fis] b,[fis a]} dis'4|%lh31
-  <<{\tupvisibility \stemDown \tuplet 12/8 {e,8[e b e' b gis] e[b d' e' d' b]}} \\ {\stemUp s2 e}>>|%lh32
+  <<{\tupvisibility \stemDown \tuplet 12/8 {e,8[e b e' b gis] \once \hide NoteHead e[b d' e' d' b]}} \\ {\stemDown s2 \slength e}>>|%lh32
   \tuplet 12/8 {e8[a cis' e' c' a] e[gis b e' b g]}|%lh33
   \tuplet 12/8 {e8[fis ais cis' ais fis] e[fis a dis' a fis]}|%lh34
   \tuplet 12/8 {e8[gis b e' b gis] cis[e ais] b,[dis a]}|%lh35
   \tuplet 12/8 {e8[gis b e' b gis] e[b d' e' d' b]}|%lh36
   \tuplet 12/8 {e8[a cis' e' cis' a] e[a c' e' c' a]}|%lh37
   \tuplet 12/8 {e8[gis b e' b gis] e[g b e' b g]}|%lh38
-  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' ais] g[b cis' e' cis' b]}} \\ {\stemUp fis2 g}>>|%lh39
-  <<{\tupvisibility \stemDown \tuplet 12/8 {fis8[ais cis' e' cis' ais] b,[fis a]} dis'4} \\ {\stemUp fis2 s2}>>|%lh40
+  <<{\tupvisibility \stemDown \tuplet 12/8 {\once \hide NoteHead fis8[ais cis' e' cis' ais] \once \hide NoteHead g[b cis' e' cis' b]}} \\ {\stemDown \slength fis2 \slength g}>>|%lh39
+  <<{\tupvisibility \stemDown \tuplet 12/8 {\once \hide NoteHead fis8[ais cis' e' cis' ais] b,[fis a]} dis'4} \\ {\stemDown \slength fis2 s2}>>|%lh40
   \tuplet 12/8 {e,8 b,[gis b gis b,] e, b,[fis a fis b,]}|%lh41
   \tuplet 12/8 {e,8 b,[e gis e b,] ais, g[cis' e' cis' g]}|%lh42
   \tuplet 12/8 {b,8 fis[b e' b fis] b,[fis b] dis' r r}|%lh43
@@ -135,8 +131,8 @@ lhone =
   \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh46
   \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh47
   \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh48
-    \override TextSpanner.bound-details.left.text = "rit."
-    \override TextSpanner.padding = #3
+  \override TextSpanner.bound-details.left.text = "rit."
+  \override TextSpanner.padding = #3
   \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,\startTextSpan[b, e,] b,[e, b,]}|%lh49
   \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]\stopTextSpan}|%lh50
   r2 r4^\fermata \bar "|."%lh51
@@ -147,7 +143,7 @@ rhtwo =
   \tempo "Allegretto" 2 = 76
   \relative c''
   {
-    \partial 4 gis8[a]|%rh0
+    \partial 4 gis8\mf[a]|%rh0
     <<{b4 cis8[dis] e4 dis8[e]} \\ {s2 ais,}>>|%rh1
     <<{fis'8[dis b a] a[gis cis b]} \\ {a4 fis s e~\>}>>|%rh2
     <<{b'8[a] cis([b]) a([gis]) a([gis])} \\ {e4\! dis e s}>>|%rh3
@@ -157,8 +153,8 @@ rhtwo =
   <<{b4 cis8[b] b[a] a[gis]} \\ {fis4\! e dis e}>>|%rh7
   <gis e cis>8[fis] <cis' dis,>[b] e,4
   fis8[fis]|%rh9
-  \grace{cis'8(} b8)^(^[ais b cis] ais^[b cis dis])|%rh10
-  <<{\grace{fis8_(} e8)[dis e fis] dis4 fis,8[fis]} \\ {ais2(b4) dis,}>>|%rh11
+  \slashedGrace{cis'8(} b8)^(^[ais b cis] ais^[b cis dis])|%rh10
+  <<{\slashedGrace{fis8_(} e8)[dis e fis] dis4 fis,8[fis]} \\ {ais2(b4) dis,}>>|%rh11
   <<{a'8[gis e' ais,] cis[b fis fis]} \\ {e4 cis s2}>>|%rh12
   <<{g'8[g e' ais,] cis[b cis cis]} \\ {dis,4 cis dis e}>>|%rh13
   <<{e'8[dis fis ais,] cis[b a' gis]} \\ {<fis, dis>4 <e cis>_\markup{\lower #3 rit.} <fis dis> s4}>>|%rh14
@@ -173,8 +169,8 @@ rhtwo =
   <<{b4\> ais8\![b] e4 dis8[e]} \\ {gis,2 ais2}>>|%rh22
   <<{fis'8[gis16 fis] e8_\markup{\lower #3 ritard.}[fis] b4^\fermata <cis, gis d>16\p[b8.]} \\ {a!4 cis d s}>>|%rh23
   <<{b16[a8.] cis16[b8.] a16[gis8.] b16[a8.]} \\ {fis4 fis e e}>>|%rh24
-  <<{<a e cis>16[fis8.] r4 a4.^\>gis8\!} \\ {s2 dis2}>>|%rh25
-  e8\p([fis16 gis] a[b cis dis] \stemDown e8)[fis^. gis^. a^.]|%rh26
+  <<{<a e cis>16[fis8.] b4\rest a4.^\>gis8\!} \\ {s2 dis2}>>|%rh25
+  e8\f([fis16 gis] a[b cis dis] \stemDown e8)[fis^. gis^. a^.]|%rh26
   \stemNeutral
   b4 b, e gis,|%rh27
   cis4 ais r8 r16 fis gis[fis eis fis]|%rh28
@@ -205,7 +201,7 @@ rhtwo =
   <<{fis2~ <fis dis b>4 \stemDown <dis'' b>16[<cis ais>8.]} \\ {<e,, cis>4. <cisis a>8 s2}>>|%rh50
   <cis'' ais>16[<b gis>8.] q16[<ais fisis>8.] <cis ais>16[<b gis>8.] <ais fisis>16[<gis eis>8.]|%rh51
   \stemUp
-  \grace{gis8(} fis8.)[eis16 <fis ais,>8. gis16] <fis ais,>4 <a, cis, a>8[<a d, b>]|%rh52
+  \slashedGrace{gis8(} fis8.)[eis16 <fis ais,>8. gis16] <fis ais,>4 <a, cis, a>8[<a d, b>]|%rh52
   \fixed c'{<a e c>4 <a d b,>8[<a e cis>] <a fis dis>4 <a e cis>8[<a fis d>]}|%rh53
   <<{a2. \stemDown fis'8[gis]} \\ {<g, e>4. <e cis>8 s2}>>|%rh54
   \stemNeutral
@@ -229,11 +225,11 @@ rhtwo =
   {
     dis16[e fis e] dis[cis bis cis] dis[e gis fis]|%rh67
     e16[dis cisis dis] eis[fis\! a gis] fis[e dis e] fisis[gis b a]|%rh68
-    gis16\p[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh69
+    gis16\f[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh69
     gis16[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh70
     gis16[fis eis fis] gis_\markup{\lower #3 dim.}[a b a] gis[fis eis fis] gis[a b a]|%rh71
     gis16[fis eis fis] gis[a b a] fisis\>[gis a gis] eis[fis gis fis]\!|%rh72
-    dis16[e fis e]\p dis[e fis e] cisis[dis e dis] bis[cis dis e]|%rh73
+    dis16[e fis e] dis\p[e fis e] cisis[dis e dis] bis[cis dis e]|%rh73
   }
   \ottava #0
   ais16[b cis b] ais[b cis b] gis[a b a] fisis[gis a gis]|%rh74
@@ -297,6 +293,35 @@ rhtwo =
   \ottava #0
   e,4^\markup{Loco.} fisis16^^[gis a gis] fis[e dis e] fisis^^[gis a gis]|%rh114
   fis16[e dis e] fisis^^[gis a gis] fisis^^[gis a gis] fisis^^[gis a gis]|%rh115
+  fis4 eis16[fis a gis] a[fis a gis] fis[e dis cis]|%rh116
+  bis16[ais b cis] dis[e fis gis] a\<[eis fis gis] a[b cis dis]\!|%rh116
+  e4\fz fis,16[gis a gis] fis[e dis e] fisis[gis a gis]|%rh117
+  fis16[e dis e] fisis^^[gis a gis] fisis^^[gis a gis] fisis^^[gis a gis]|%rh118
+  cis4 eis,16[fis a gis] eis[fis a gis] fis[e dis cis]|%rh119
+  b16[ais b cis] dis[e fis gis] a\<[eis fis gis] a[b cis dis]\!|%rh120
+  e4 fisis,16[gis a gis] fis[e dis e] fisis[gis a gis]|%rh121
+  eis16[fis a gis] fis[e dis cis] b[ais b cis] dis[e fis gis]|%rh122
+  e16\fz[fis e dis] e[fis gis a] b\fz[cis a b] gis[a fis gis]|%rh123
+  e16\fz[fis e dis] e[fis gis a] b\fz[cis a b] gis[a fis gis]|%rh124
+  e16\<[e, fis gis] a[b cis dis]\! e8[fis gis a]|%rh125
+  b8\ff[b, e gis,] cis[fis, a dis,]|%rh126
+  e4 b' e gis,|%rh127
+  cis4 r gis\p a|%rh128
+  <b dis,>4 r cis, dis|%rh129
+  \clef "bass"
+  \fixed c
+  {
+    <e' gis>2. gis8.[a16]|%rh130
+    <b a dis>2. <cis' a e>8.[<dis' a fis>16]|%rh131
+    <e' gis e>2. gis8.[a16]|%rh132
+    <b a dis>2. <c' a e>8.[<dis' a fis>16]|%rh133
+    <e' gis e>4 gis8.[a16] <b a dis>4 <cis' a e>8.[<dis' a fis>16]|%rh134
+    \override TextSpanner.bound-details.left.text = "rall."
+    <e' gis e>4_\startTextSpan gis8.[a16] <b a dis>4 <cis' a e>8.[<dis' a fis>16]|%rh135
+    <dis' a fis>1|%rh136
+    <e' gis e>4 r r2\stopTextSpan|%rh137
+    q2. \bar "|."%rh138
+  }
   }
 }
 
@@ -324,11 +349,11 @@ lhtwo =
   \override TextSpanner.padding = #3
   b4 s s <d' b eis>\startTextSpan|%lh14
   <dis' b fis>2 <e' ais fis>\stopTextSpan|%lh15
-  \change Staff = "rh" <dis' b>4_\markup{\bold{a Tempo.}} q8[<e' cis'>] <fis' dis'>4 q8[<gis' e'>]|%lh16
+  \change Staff = "rh" <dis' b>4_\markup{a Tempo.} q8[<e' cis'>] <fis' dis'>4 q8[<gis' e'>]|%lh16
   <fis' dis'>8[<e' cis'> <dis' b> \change Staff = "lh" <cis' a>_\markup{dim.}] <b gis>[<a fis> <gis e> <a fis>]|%lh17
   \stemNeutral
   gis8[b \change Staff = "rh" e' \change Staff = "lh" b] gis8[b \change Staff = "rh" e' \change Staff = "lh" b]|%lh18
-  a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e> r <cis' eis>4|%lh19
+  a8[b \change Staff = "rh" fis' \change Staff = "lh" b] <gis e> d\rest <cis' eis>4|%lh19
   <cis' fis>4 <b dis> <b e> cis'8[b]|%lh20
   ais4 fis b, r|%lh21
   \clef "treble"
@@ -414,10 +439,10 @@ lhtwo =
   c8[c]|%lh90
   c8[c c c] c[c c c]|%lh91
   c8[c c c] c[c c c]|%lh92
-  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown <g e>2 <a f>2}>>|%lh93
-  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown <f d>2 <g e>2}>>|%lh94
-  <<{\stemDown \once \hide NoteHead c8[c c c] \stemUp  c[c c c]} \\ {\stemDown <a fis>2 s2}>>|%lh95
-  <<{\stemDown \once \hide NoteHead c8[c c c] <g e c>[<g e> q q]} \\ {\stemDown <a fis>2 s2}>>|%lh96
+  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown \slength <g e>2 \slength <a f>2}>>|%lh93
+  <<{\stemDown \once \hide NoteHead c8[c c c] \once \hide NoteHead c[c c c]} \\ {\stemDown \slength <f d>2 \slength <g e>2}>>|%lh94
+  <<{\stemDown \once \hide NoteHead c8[c c c] \stemUp  c[c c c]} \\ {\stemDown \slength <a fis>2 s2}>>|%lh95
+  <<{\stemDown \once \hide NoteHead c8[c c c] <g e c>[<g e> q q]} \\ {\stemDown \slength <a fis>2 s2}>>|%lh96
   \stemNeutral
   <g e c>8[<g e> q q] <g e c>[<g e> q q]|%lh97
   <g e cis>8[<g e> q q] <fis d>[<a fis> q q]|%lh98
@@ -426,17 +451,17 @@ lhtwo =
   <<{<g e>8[q q q] <a fis>[q q q]} \\ {d4 g,\rest d r}>>|%lh100
   <<{<b gis>8[q q q] <a fis>[q q q]} \\ {d4 r d r}>>|%lh101
   <<{<b gis>8[q q q] <a fis>[q q q]} \\ {d4 r d r}>>|%lh102
-  <<{\stemDown \once \hide NoteHead cis8[<a fis> q q] \once \hide NoteHead cis8[q q q]} \\ {\stemDown dis2 eis2}>>|%lh103
-  <<{\stemDown \once \hide NoteHead cis8[<e' ais> q q] bis,[<fis' a> q q]} \\ {fis2 s2}>>|%lh104
+  <<{\stemDown \once \hide NoteHead cis8[<a fis> q q] \once \hide NoteHead cis8[q q q]} \\ {\stemDown \slength dis2 \slength eis}>>|%lh103
+  <<{\stemDown \once \hide NoteHead cis8[<e' ais> q q] bis,[<fis' a> q q]} \\ {\slength fis2 s}>>|%lh104
   \key e \major
-  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] a,[<cis' a> q q]} \\ {e2 s2}>>|%lh105
+  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] a,[<cis' a> q q]} \\ {\slength e2 s2}>>|%lh105
   <a fis bis,>2 <gis e cis>4 <a e a,>|%lh106
   <b d>2 <b e>4 \stemUp <cis' a,>8[a]|%lh107
   \stemNeutral
   <<{<b gis>4 <ais g> <a fis> \stemDown <dis' fis bis,>} \\ {b,2~ b,4 s}>>|%lh108
   <cis' e cis>2 <a a,>|%lh109
   <<{<b gis>2 <a fis>} \\ {b,1}>>|%lh110
-  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] \once \hide NoteHead cis[<d' b> q q]} \\ {\stemDown e2 e2}>>|%lh111
+  <<{\stemDown \once \hide NoteHead cis8[<b gis> q q] \once \hide NoteHead cis[<d' b> q q]} \\ {\stemDown \slength e2 \slength e2}>>|%lh111
   e8[<cis' a> q q] e[<dis' a fis> q q]|%lh112
   e8 <gis' b>[<e' gis>] r e \clef "treble" <b' d'>[<gis' b>] r|%lh113
   e8 <cis' e'>[<a' cis'>] r e \clef "bass" <fis' a>[<dis' fis>] r|%lh114
@@ -444,6 +469,32 @@ lhtwo =
   e8 <cis'' e'>[<a' cis'>] r \clef "bass" e <fis' a>[<dis' fis>] r|%lh116
   e8 <gis' b>[<e' gis>] r e <gis' b>[<e' gis>] r|%lh117
   cis8 <e' gis>[<cis' e>] r cis <e' gis>[<cis' e>] r|%lh118
+  a,8 <e' a>[<cis' fis>] r a, <e' a>[<cis' fis>] r|%lh119
+  b,8 <fis' a>[<dis' fis>] r b, <fis' a>[<dis' fis>] r|%lh120
+  e8 <gis' b>[<e' gis>] r e <gis' b>[<e' gis>] r|%lh121
+  cis8 <e' gis>[<cis' e>] r cis <e' gis>[<cis' e>] r|%lh122
+  a,8 <e' a>[<cis' fis>] r a, <e' a>[<cis' fis>] r|%lh123
+  b,8 <fis' a>[<dis' fis>] r b, <fis' a>[<dis' fis>] r|%lh124
+  e8 <gis' b>[<e' gis>] r cis <e' gis>[<cis' e>] r|%lh125
+  a,8 <a' cis'>[<fis' a>] r b, <fis' a>[<dis' fis>] r|%lh126
+  e8_\markup{con fuoco.} <gis' b>[<e' gis>] r b, <fis' a>[<dis' fis>] r|%lh127
+  e8 <gis' b>[<e' gis>] r b, <fis' a>[<dis' fis>] r|%lh128
+  e8[fis16 gis] a[b cis' dis'] \clef "treble" e'8[fis' gis' a']|%lh128
+  b'8[<fis' dis'> <e' cis'> <dis' b>] <cis' a>4 \clef "bass" <a fis b,>|%lh129
+  <gis e>4 <fis' dis'> <e' cis'> <dis' b>|%lh130
+  <cis' a>4 r r2|%lh131
+  <a fis b,>4 r r2|%lh132
+  \tempo "Adagio" 4 = 72
+  \tupvisibility
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh133
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh134
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh135
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh136
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh137
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh138
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,]}|%lh139
+  \tuplet 12/8 {e,8[b, e,] b,[e, b,] e,[b, e,] b,[e, b,~]}|%lh140
+  <b, e,>2.
 }
 
 \score
@@ -473,6 +524,18 @@ lhtwo =
       \lhone
     }
   >>
+}
+
+\header
+{
+  title = \markup{\fontsize #5 \bold{h}}
+  composer = \markup{\fontsize #2 {John Field}}
+}
+
+\paper
+{
+  print-all-headers = ##t
+  ragged-bottom = ##f
 }
 
 \score
