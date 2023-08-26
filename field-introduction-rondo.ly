@@ -175,6 +175,7 @@ rhtwo =
   b4 b, e gis,|%rh27
   cis4 ais r8 r16 fis gis[fis eis fis]|%rh28
   a4 dis, r8 dis[cis' b]|%rh29
+  \pageBreak
   e,8[fis16 gis]\stemUp a[b cis dis] \stemDown e8[fis gis a]|%rh30
   \stemNeutral
   b4 b, e gis,|%rh31
@@ -228,6 +229,7 @@ rhtwo =
     gis16\f[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh69
     gis16[fis eis fis] gis[a b a] gis[fis e fis] gis[a b a]|%rh70
     gis16[fis eis fis] gis_\markup{\lower #3 dim.}[a b a] gis[fis eis fis] gis[a b a]|%rh71
+    \pageBreak
     gis16[fis eis fis] gis[a b a] fisis\>[gis a gis] eis[fis gis fis]\!|%rh72
     dis16[e fis e] dis\p[e fis e] cisis[dis e dis] bis[cis dis e]|%rh73
   }
@@ -291,11 +293,12 @@ rhtwo =
     a4~\>a16\![gis fis e] dis[cis c b] ais[a gis fis]|%rh113
   }
   \ottava #0
-  e,4^\markup{Loco.} fisis16^^[gis a gis] fis[e dis e] fisis^^[gis a gis]|%rh114
+  e,4 fisis16^^[gis a gis] fis[e dis e] fisis^^[gis a gis]|%rh114
   fis16[e dis e] fisis^^[gis a gis] fisis^^[gis a gis] fisis^^[gis a gis]|%rh115
   fis4 eis16[fis a gis] a[fis a gis] fis[e dis cis]|%rh116
   bis16[ais b cis] dis[e fis gis] a\<[eis fis gis] a[b cis dis]\!|%rh116
   e4\fz fis,16[gis a gis] fis[e dis e] fisis[gis a gis]|%rh117
+  \pageBreak
   fis16[e dis e] fisis^^[gis a gis] fisis^^[gis a gis] fisis^^[gis a gis]|%rh118
   cis4 eis,16[fis a gis] eis[fis a gis] fis[e dis cis]|%rh119
   b16[ais b cis] dis[e fis gis] a\<[eis fis gis] a[b cis dis]\!|%rh120
@@ -497,17 +500,36 @@ lhtwo =
   <b, e,>2.
 }
 
+\header
+{
+  title = \markup{\fontsize #3 {\bold{Reviens Reviens}}}
+  subtitle = \markup{\fontsize #3 Cavatine}
+  subsubtitle = \markup{\fontsize #1 {Introduction and Rondo on 'Come Again'}}
+  composer = \markup{\fontsize #2 {John Field}}
+  opus = \markup{H 53}
+}
+
+\paper
+{
+  print-all-headers = ##t
+  bottom-margin = 2\cm
+}
+
 \score
 {
   \header
   {
     title = ""
     composer = ""
-    opus = "H 53"
-    subtitle = "Reviens Reviens"
-    subsubtitle = "Cavatine"
+    subtitle = ""
+    subsubtitle = ""
   }
   \new PianoStaff
+  \with
+  {
+    instrumentName = "Piano"
+    midiInstrument = "acoustic grand"
+  }
   <<
     \new Staff = "rh"
     {
@@ -524,18 +546,8 @@ lhtwo =
       \lhone
     }
   >>
-}
-
-\header
-{
-  title = \markup{\fontsize #5 \bold{h}}
-  composer = \markup{\fontsize #2 {John Field}}
-}
-
-\paper
-{
-  print-all-headers = ##t
-  ragged-bottom = ##f
+  \layout{}
+  \midi{}
 }
 
 \score
@@ -549,6 +561,10 @@ lhtwo =
     subsubtitle = ""
   }
   \new PianoStaff
+  \with
+  {
+    midiInstrument = "acoustic grand"
+  }
   <<
     \new Staff = "rh"
     {
@@ -567,9 +583,11 @@ lhtwo =
   >>
   \layout
   {
+    indent = 0
     \context
     {
       \PianoStaff \consists "Span_stem_engraver"
     }
   }
+  \midi{}
 }
