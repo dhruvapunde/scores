@@ -46,6 +46,74 @@ righthand =
     \ottava #1
     e16^1 fis^2 e a fis[b, a, b,|%30
     cis8^.] <cis gis, e,>16^^\sf[a,] b, cis b, cis|%31
+    d cis b, a, b, fis, fis, a,|%32
+    b,8^. <e cis gis,>16^>\sf[fis] e cis b, cis|%33
+    e8^. <e cis gis,>16^>\sf[fis] gis e dis b,|%34
+    e8^. <e cis gis,>16^>\sf[fis] dis b, ais, b,|%35
+    e cis b, ais, b, cis b, d|%36
+    cis8\f[<cis' cis>16 a] <b d> cis' <b e> cis'|%37
+    <<{e16 fis e a fis d a, b,} \\ {d8[cis] b,[<fis, e,>]}>>|%38
+    ais,8[<cis' c>16 a] <b d> cis' <b e> cis|%39
+    <<{d'16 cis' b cis' b fis e fis} \\ {fis8[e] d4}>>|%40
+    <g e>8 <g e c>16^>[a] g e d e|%41
+    g8 <g e c>16^>[a] b g fis d|%42
+    g8 <g e c>16^>[a] fis d cis d|%43
+    g e d cis d fis e fis|%44
+    <g e>8 <g e b,>16^>[a] g e d e|%45
+    <g e>8 <g e b,>16^>[a] g e d e|%46
+    a fis e g b\<g fis g|%47
+    c' g fis g a bes c' d'\!|%48
+    <e' cis' a>8\ff \stemDown <e e,>16[cis] <d e,> e q e|%49
+    <g a,> fis <e a,> d \stemNeutral <cis e,> a, <b, e,> cis|%50
+    <e e,> d <cis e,> b, <a, d,> e <f, d,> a,|%51
+    <d e,> cis <b, e,> a, <a, d,> fis, e, d,|%52
+    <e, cis,>8 <e' e>16[cis'] <d' e> e' q b|%53
+    <cis' e> e' q a <b e> g <a e> b|%54
+    <cis' e> a <b e> cis' <e' e> d' <cis' e> b|%55
+    <a e> fis e fis <e d> fis q fis|%56
+    <e cis> fis q fis <e b,> fis q fis|%57
+    <e a,> fis q fis <e d> fis q fis|%58
+    <e a,> fis q fis <e d> fis q fis|%59
+    <e a,> fis q fis <e d> fis q fis|%60
+    <gis e b,>8^> <fis e c>16([g q g q a|%61
+    <gis e b,>8^.^-]) <fis e c>16([g q g q a|%62
+    <gis e b,>8^.^-]) <b gis e>16([c' q c' q d'])|%63
+    <c' g! e>8 \ottava #0 
+    \fixed c''
+    {
+      <b gis e>16([a q a q d'])|%64
+      c'8^.^- <c' g e>16^>[a] bes c' bes c'|%65
+    }
+    \ottava #1
+    e f e a f bes, a, bes,|%66
+    c8^. <c g, e,>16_>[a,] bes, c bes, c|%67
+    d c bes, a, bes, f, f, a,|%68
+    c8^. <e c a>16^>[f] e c b,! c|%69
+    e8^. <e c g,>16[f] g e d bes,|%70
+    e8^.[<e c gis,>16(f] dis8^.)[<dis b, g,>16(e]|%71
+    d!8^.)[<d bes, fis,>16 e] <cis a, f,!> d <a, f,> b,|%73
+    <c e,>8_. e16\ff[c] d a e g|%74
+    a e' a g b d c d|%75
+    e8^. c'16[c] d a e g|%76
+    a b c' d' b d c d|%77
+    f^- g f g e a g, g|%78
+    f^- g f g e a g, e|%79
+    d e f g a^3 b g f|%80
+    f^3 g e d d^3 e c b,|%81
+    c\p f aes, ees, f, c ees, bes,|%82
+    c f aes, ees, f, c ees, bes,|%83
+    c f aes, ees, f, c ees, bes,|%84
+    c f bes, aes, c f, ees, f,|%85
+    \ottava #0
+    \fixed c''
+    {
+      fis cis' cis e e(fis) fis(gis)|%86
+      fis cis' cis eis gis(fis) fis(eis)|%87
+      fis cis' cis e! f cis' c e|%88
+      fis c' c e f c' c e|%89
+      <<{c'8^.\pp d'16([ees' d' ees' d' f']} \\ {r8 <c' a>4._(}>>|%90
+      <<{e'8^.)} \\ {g8)}>>
+    }
   }
 }
 
