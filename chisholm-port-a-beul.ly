@@ -248,7 +248,7 @@ lefthand =
       \fixed c''
       {
         <<{s2} \\ {\tuplet 6/4 {c'16^([b! a! g! a b]} c'8^.) b,\rest}>>|%94
-        <<{s32*10 \ottava #0 \once \hideNotes d_\markup{\italic{\bold{\rotate #350 {glissando}}}}} \\ {\ottava #2 c'''32\glissando^(\ppp s2 s4 s32*6}>>
+        <<{s32*10 \ottava #0 \once \hideNotes \override TextScript.padding = #-1 d_\markup{\italic{\bold{\rotate #350 {glissando}}}}} \\ {\ottava #2 c'''32\glissando^(\ppp s2 s4 s32*6}>>
         \clef "bass"
         <<{} \\ {\ottava #-1 \once \stemUp d,,,,32)}>>
         R2
