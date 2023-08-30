@@ -62,6 +62,14 @@ rhone =
   }
   s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s4.
   g8^1[aes c'^4]|%69
+  d'8.[c'16 d'8] \clef "treble" 
+  \fixed c'
+  {
+    d'8^-\>[(c')\! g,_.]|%70
+    a16^([g a g c d] ees [a g g, a, c]|%71
+    cis16[e_\markup{\italic{dim.}} b, cis fis, a,] b,[fis e cis fis, a,])|%72
+    r4 r8 r8 r16^\pp
+  }
 }
 
 lhone =
@@ -139,8 +147,18 @@ lhone =
   c,2.~|%66
   <a, c,>2.~|%67
   c,2.~|%68
-  c,2.~|%69
-  c,4. r4 r8|%70
+  c,2._~|%69
+  \once \stemDown c,4. r4 r8|%70
+  s2.
+  \stemDown
+  r4 r8 <bes, ees,>4._~|%71
+  q4 s8 s4.|%72
+  s4 r8 q4._~|%73
+  q4 r8 s4.|%74
+  r4 r8 <ees aes, ees,>4._~|%75
+  q2.|%76
+  r4 r8 <ees aes, ees,>4._~|%76
+  q2.|%77
 }
 
 rhtwo =
@@ -260,7 +278,26 @@ lhtwo =
     bes'32^5\<([ees f g])\! r8 r ees32^4\<([f g c])\!|%45
     r8 r bes32\<([c d ees])\! r8 r \ottava #1 ees32\<([f g c])\!|%46
     \ottava #0
+    s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s4.
+    e,,,,4.~|%71
+    \once \stemUp e2.~|%72
+    e4.~ e4.
+    \stemUp
+    <bes' ees,>2.^~|%73
+    q4 bes8^(s4.|%74
+    <bes ees,>2.^~^\p)|%75
+    q4 b8_( c4.|%76
+    <ees aes,>2.)^~|%77
+    q4. \once \stemDown <f c f,>|%78
+    <g ees c>2.^~|%79
+    q4. \stemNeutral <aes des, aes>4 ees,8^\staccatissimo|%80
   }
+  <ees bes, ees,>4_> bes8^> <bes ees bes,>4 ees'8^\staccatissimo|%81
+  <ees' bes ees>4 bes8^\staccatissimo <bes ees bes,>4 ees8^\staccatissimo|%82
+  <ees bes, ees,>4_> bes8^> <bes ees bes,>4 ees'8^\staccatissimo|%82
+  <ees' bes ees>4 bes8^\staccatissimo <bes ees bes,>4 ees8^\staccatissimo|%83
+  <ees bes, ees,>4_> bes8^\staccatissimo <bes ees bes,>4.~|%84
+  q4. r4 ees8^.^\mf|%85
 }
 
 %\paper
