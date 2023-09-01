@@ -68,7 +68,29 @@ rhone =
     d'8^-\>[(c')\! g,_.]|%70
     a16^([g a g c d] ees [a g g, a, c]|%71
     cis16[e_\markup{\italic{dim.}} b, cis fis, a,] b,[fis e cis fis, a,])|%72
-    r4 r8 r8 r16^\pp
+    s2 \once \hideNotes bes16^( s16 s8|%73
+    <f'' bes'>4.) b,16^([fis e cis fis, a,])|%74
+    s2 \once \hideNotes bes16^( s16 s8|%75
+    <f'' bes'>4.) \change Staff = "lh" cis16\>\mf^([\change Staff = "rh" a gis dis bes, b,])\!|%76
+  }
+  \relative c'''
+  {
+    r4 ees8^.\p ees16^-[(c) r8 c^.]|%77
+    c16^-\<[(bes) r8 g^.^4] g16[(f) r8 ees^.]\!|%78
+    ees16^4^-[(c) r8 c^5_.] <c g ees>16^-[(bes) r8 aes_.^5]|%79
+    aes16^-[(g) r8 f_.] f16^>[(ees)] r8 \once \stemDown <c'' c,>8|%80
+    g16^>[^(f8.) <g g,>8] <ees g, ees>4 bes8|%81
+    <c g c,>4\<<ees g,>8^3\! <bes' ees, bes>4 <des des,>8|%82
+    aes16^>[^(f8.) <aes aes,>8] <des, aes f>4 aes8|%83
+    <ces aes f>4^3 <des f,>8 <aes' des, aes>4 <ees' ees,>8|%84
+    bes16^>[^(g8.) bes8] <ees, bes>4 <g ees>8^3^5|%85
+    bes,16^1^4[^(g8.) bes8] <ees, bes g>4.~|%86
+    q2.|%87
+    r4 r8 <bes' g>4.^(|%88
+    <bes ees, des>2.^-)|%89
+    r4 r8 \once \stemDown <f' ees g,>4.(|%90
+    ees'16)[(c) r8 c8^.] c16[(bes) r8 g^.^5]|%91
+    f16^4[(ees) r8 g^.] bes,16^1^4^([g^2~] g4^5)|%92
   }
 }
 
@@ -243,6 +265,17 @@ rhtwo =
       e8.^2\mp[d16^- e8^-] g4^-^4 aes8|%66
       r16\p c,([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^-^1])|%67
       e8.^2\mp[d16 e8] g4.|%68
+      f4. s4.|%69
+      r4 r8 ees'4 s8|%70
+      s2.|%71
+      r4 r8 r8 r16^\pp bes'16_\markup{\bold{L.H.}}[<f' bes,>8_~]|%73
+      q4. s4.|%74
+      r4 r8 r8 r16^\pp bes,16_\markup{\bold{L.H.}}[<f' bes,>8_~]|%75
+      q4. s4.|%76
+      s4. ees4._~|%77
+      ees4. s4.|%78
+      s2. s2.
+      <bes g>4\ff s8 s4.|%81
     }
 }
 
@@ -286,7 +319,7 @@ lhtwo =
     <bes' ees,>2.^~|%73
     q4 bes8^(s4.|%74
     <bes ees,>2.^~^\p)|%75
-    q4 b8_( c4.|%76
+    q4 b8_( \once \stemDown c4._-|%76
     <ees aes,>2.)^~|%77
     q4. \once \stemDown <f c f,>|%78
     <g ees c>2.^~|%79
