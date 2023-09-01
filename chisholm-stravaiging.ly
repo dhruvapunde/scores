@@ -91,6 +91,27 @@ rhone =
     r4 r8 \once \stemDown <f' ees g,>4.(|%90
     ees'16)[(c) r8 c8^.] c16[(bes) r8 g^.^5]|%91
     f16^4[(ees) r8 g^.] bes,16^1^4^([g^2~] g4^5)|%92
+    \clef "bass"
+    ees4.^3^5 des^2^5|%93
+    g,4.^5 <f des bes>^2^3^5|%94
+    bes,2.\pp|%95
+    \stemNeutral
+    g'16^-^5[(f8.) g8] ees4^3 bes8~|%96
+    bes4.~ bes4 r8|%97
+    g'16^-^5[(f8.) g8] ees4^3 bes8~|%98
+    bes2.|%99
+    \change Staff = "lh" ees,8 \change Staff = "rh" \stemUp f_2^(g_1_\markup{\italic{morendo}} \stemNeutral c_3 bes f'|%100
+    g^1 bes^2 c^3 \clef "treble"
+    \relative c'
+    {
+      \tuplet 4/6 {f16_5[ees_1 bes'_4 f_2]}|%101
+      \once \override TupletBracket.bracket-visibility = ##f
+      \tuplet 10/12 {g16[bes c ees f] g[bes c ees f])}|%102
+      r4 r8 r4 c8^4^.|%103
+      bes16^3[(g) r8 des'8^.] ces,4.~|%104
+      ces4. r4 cis8(|%105
+      ees'8^5) r8 r \ottava #1 \fixed c'''{<g' f' ees' g>8^\staccatissimo\sff} \ottava #0 r8 r \bar "|."
+    }
   }
 }
 
@@ -331,6 +352,28 @@ lhtwo =
   <ees' bes ees>4 bes8^\staccatissimo <bes ees bes,>4 ees8^\staccatissimo|%83
   <ees bes, ees,>4_> bes8^\staccatissimo <bes ees bes,>4.~|%84
   q4. r4 ees8^.^\mf|%85
+  \stemDown
+  bes,4.^1^>(<bes, g,>4) bes,8^5_~|%86
+  bes,2 r4|%87
+  bes,2 s8 bes8~|%88
+  bes4. r4 r8|%89
+  bes2.|%90
+  ees2.|%91
+  r8 r16
+  \fixed c,
+  {
+    bes8.~[bes ees~|%92
+    ees8. bes,~ bes, ees,_~]|%93
+    ees,4._~ ees,4 bes,8_~|%94
+    bes,4. ees,4._~|%95
+    ees,4._~ ees,4 bes,8_~|%96
+    bes,4._(ees,_~)|%97
+    ees,4._~ ees,4 bes,8_~_(|%98
+    bes,4. ees,4._~)|%99
+    \stemUp
+    ees,2._~ ees,2._~ ees,2._~ \stemUp ees,2.
+    s2. s2.
+  }
 }
 
 %\paper
