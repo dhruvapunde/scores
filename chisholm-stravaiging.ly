@@ -1,5 +1,11 @@
 \version "2.24.2"
 
+eighthshift =
+{
+  \once \override NoteColumn.force-hshift = #0.55
+  \once \hide NoteHead
+}
+
 rhone =
 {
   \clef "bass"
@@ -44,7 +50,7 @@ rhone =
     \stemDown des2._~\mf|%33
     des4 c8_~\<c4 bes'8\!|%34
     \stemUp
-    g'16^>^1^2^5[^(f8.) g8] <des bes>4^1^2^4 s8|%35
+    g'16^>-5[^(f8.) g8] <des bes>4^1^2^4 s8|%35
     ees4 f8 c4 bes'16[aes]|%36
     aes16^>^5[^(g8.) aes8] ees4^1^2^4 aes,8|%37
     des4^1^2^4 ees8 bes4^4 aes'16[bes]|%38
@@ -61,56 +67,56 @@ rhone =
     f'8 s4 s4.|%46
   }
   s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s4.
-  g8^1[aes c'^4]|%69
+  \eighthshift g8^1[aes c'^4]|%69
   d'8.[c'16 d'8] \clef "treble" 
   \fixed c'
   {
     d'8^-\>[(c')\! g,_.]|%70
     a16^([g a g c d] ees [a g g, a, c]|%71
-    cis16[e_\markup{\italic{dim.}} b, cis fis, a,] b,[fis e cis fis, a,])|%72
+    \change Staff = "lh" cis16[\change Staff = "rh" e b,_\markup{\lower #5 \italic{dim.}} cis fis, a,] b,[fis e cis fis, a,])|%72
     s2 \once \hideNotes bes16^( s16 s8|%73
-    <f'' bes'>4.) b,16^([fis e cis fis, a,])|%74
+    <f'' bes'>4.) \change Staff = "lh" b,16^([\change Staff = "rh" fis\> e cis fis, a,])\!|%74
     s2 \once \hideNotes bes16^( s16 s8|%75
-    <f'' bes'>4.) \change Staff = "lh" cis16\>\mf^([\change Staff = "rh" a gis dis bes, b,])\!|%76
+    <f'' bes'>4.) \change Staff = "lh" \once \hide NoteHead cis16\mf^([\change Staff = "rh" a\> gis dis bes, b,])\!|%76
   }
   \relative c'''
   {
-    r4 ees8^.\p ees16^-[(c) r8 c^.]|%77
-    c16^-\<[(bes) r8 g^.^4] g16[(f) r8 ees^.]\!|%78
-    ees16^4^-[(c) r8 c^5_.] <c g ees>16^-[(bes) r8 aes_.^5]|%79
-    aes16^-[(g) r8 f_.] f16^>[(ees)] r8 \once \stemDown <c'' c,>8|%80
+    r4 ees8^.\p ees16^-[^(c) r8 c^.]|%77
+    c16^-\<[^(bes) r8 g^.^4] g16[^(f) f8\rest ees^.]\!|%78
+    ees16^4^-_\markup{\lower #3 \italic{molto cresc.}}[^(c) r8 c^5_.] <c g ees>16^-[^(bes) r8 aes_.^5]|%79
+    aes16^-[^(g) r8 f_.] f16^>[^(ees)] r8 \once \stemDown <c'' c,>8|%80
     g16^>[^(f8.) <g g,>8] <ees g, ees>4 bes8|%81
     <c g c,>4\<<ees g,>8^3\! <bes' ees, bes>4 <des des,>8|%82
     aes16^>[^(f8.) <aes aes,>8] <des, aes f>4 aes8|%83
     <ces aes f>4^3 <des f,>8 <aes' des, aes>4 <ees' ees,>8|%84
-    bes16^>[^(g8.) bes8] <ees, bes>4 <g ees>8^3^5|%85
+    bes16^>\sf[^(g8.) bes8] <ees, bes>4 <g ees>8^3^5|%85
     bes,16^1^4[^(g8.) bes8] <ees, bes g>4.~|%86
     q2.|%87
-    r4 r8 <bes' g>4.^(|%88
+    r4 r8\mf <bes' g>4.^(|%88
     <bes ees, des>2.^-)|%89
     r4 r8 \once \stemDown <f' ees g,>4.(|%90
-    ees'16)[(c) r8 c8^.] c16[(bes) r8 g^.^5]|%91
-    f16^4[(ees) r8 g^.] bes,16^1^4^([g^2~] g4^5)|%92
+    ees'16)[^(c) r8 c8^.] c16[^(bes) r8 g^.^5]|%91
+    f16^4[^(ees) r8 g^.] bes,16^1^4^([g^2~] g4^5)|%92
     \clef "bass"
     ees4.^3^5 des^2^5|%93
-    g,4.^5 <f des bes>^2^3^5|%94
-    bes,2.\pp|%95
+    \once \override NoteColumn.force-hshift = #-0.5 g,4.^5 <f des>^2^3^5|%94
+    s2.
     \stemNeutral
-    g'16^-^5[(f8.) g8] ees4^3 bes8~|%96
+    g16^-^5[(f8.) g8] ees4^3 bes8~|%96
     bes4.~ bes4 r8|%97
     g'16^-^5[(f8.) g8] ees4^3 bes8~|%98
     bes2.|%99
-    \change Staff = "lh" ees,8 \change Staff = "rh" \stemUp f_2^(g_1_\markup{\italic{morendo}} \stemNeutral c_3 bes f'|%100
+    \change Staff = "lh" \voiceThree \once \override NoteColumn.force-hshift = #-0 \once \hide NoteHead ees,8^(\stemUp \change Staff = "rh" f_2 g_1 \stemNeutral c_3_\markup{\lower #3 \italic{morendo}} bes f'|%100
     g^1 bes^2 c^3 \clef "treble"
     \relative c'
     {
       \tuplet 4/6 {f16_5[ees_1 bes'_4 f_2]}|%101
       \once \override TupletBracket.bracket-visibility = ##f
       \tuplet 10/12 {g16[bes c ees f] g[bes c ees f])}|%102
-      r4 r8 r4 c8^4^.|%103
+      e,4\rest e8\rest e4\rest c8^4^.|%103
       bes16^3[(g) r8 des'8^.] ces,4.~|%104
       ces4. r4 cis8(|%105
-      ees'8^5) r8 r \ottava #1 \fixed c'''{<g' f' ees' g>8^\staccatissimo\sff} \ottava #0 r8 r \bar "|."
+      ees'8^5) r8 r\sff \ottava #1 \fixed c'''{<g' f' ees' g>8^\staccatissimo} \ottava #0 r8 r \bar "|."
     }
   }
 }
@@ -120,11 +126,12 @@ lhone =
   \clef "bass"
   \key ees \major
   \time 6/8
+  \once \override Slur.height-limit = #12
   \partial 8 ees8_1(|%0
   bes,4_2 ees,8 f,4 bes,8|%1
-  c8[\change Staff = "rh" g^4 f] c[\change Staff = "lh" bes,_4 c]|%2
+  c8[\change Staff = "rh" g^4 f] ees[\change Staff = "lh" bes,_4 c]|%2
   f4 s2|%3
-  \change Staff = "rh" f'8[ees'\> c'] bes[c' g]\!)|%4
+  \change Staff = "rh" f'8^-[ees'\> c'] bes[c' g]\!)|%4
   \change Staff = "lh"
   \clef "treble"
   f'4^2_-_(ees'8 f'4 g'8|%5
@@ -202,6 +209,26 @@ lhone =
   q2.|%76
   r4 r8 <ees aes, ees,>4._~|%76
   q2.|%77
+  s2. s s s s s
+  \stemUp
+  bes,16[ees,8. f,8] s4 bes,8^(|
+  c8 g f\> ees bes, c)\!|
+  bes,16^([f8. g8] c'4) bes8^(|
+  f'8^- ees' c' bes c' g)|
+  f'4^-^1^5^(ees'8^3 f'4^2 g'8|
+  c'4 bes8) s4 ees'8|
+  s2. s2. 
+  ees,4^(c,8 ees,4 bes,,16^3[c,])|
+  ees,4. r4 r8|
+  des,4^1^(bes,8 des,4 aes,,16^3[bes,,^2]|
+  des,4.) r4 r8|
+  ees,4^(c,8 ees,4 bes,,16[c,]|
+  \once \stemDown \voiceOne ees,4.) s4.
+  s2. s2. s4 r8 s4
+  c'8^.^1|
+  bes16^2[(g) r8 des'8^.]
+  \stemUp
+  ces4.~ ces r4 a,8^1_(ees,8_3) r8 r8 \clef "treble" \fixed c'''{\once \stemDown <f ees bes,>8^\staccatissimo} r8 r
 }
 
 rhtwo =
@@ -220,18 +247,18 @@ rhtwo =
       {
         <ees bes,>]|%19
         <f c>16^1^5_\markup{\lower #3 \italic{cresc.}}[<ees bes,>^2^4 <f c> <ees bes,> <g, f,>^1 <ees bes,>] <f c>16[<ees bes,> <f c> <ees bes,> <g, f,> <ees bes,>]|%20
-        c16[g,_\markup{\lower #3 \italic{dim.}} f ees c g,] bes,^2[f, f ees bes, f,]|%21
-        c16^2\>[g, g^5 f ees c] bes,8) r\!
+        c16^2[g, f_\markup{\lower #3 \italic{dim.}}  ees c g,] bes,^2[f, f ees bes, f,]|%21
+        c16^2\>[g, g^5 f ees c] bes,8^3) r\!
       }
     }
     bes'16^2\p([c]|%22
     ees16^-^5[c) r16 c8^.^4] s4 s16 des,8_~|%23
     des4. s4 c'16^2_([c]|%24
     ees16_-[c8.) c8_.] c16_.\<[bes8. aes8_.^2]\!|%25
-    aes16_>\>_([g8. f8]) s4\! \ottava #0 ees8\mp|%26
+    aes16_>\>_([g8. f8]) s4\! \ottava #0 ees8^5\mp|%26
     g,16_-[f8. g8] ees4 bes8|%27
     c4\>ees8 s4\! <c'' ees,_~>8^1^5|%28
-    <f, ees>4 <g d_~>8^1^4 <f d>4 c8_~|%29
+    <f, ees>4 <g d_~>8^1^4 <f d>4^3 c8_~|%29
     c4._~ c4 bes16_([aes])|%30
     g16_-_([f8. g8] f4 bes,8|%31
     c4 ees8 g4) bes'16^3(\<[c]\!|%32
@@ -240,7 +267,7 @@ rhtwo =
     \ottava #1
     bes'16[aes]|%34
     \stemDown
-    <ees bes>4. aes,4 bes8^2|%35
+    <ees^2 bes^1>4. aes,4 bes8^2|%35
     <bes g>4. <aes f>4 bes8|%36
     <ees bes>4. <bes aes>4.|%37
     q4. <f ees>4 bes8|%38
@@ -254,16 +281,19 @@ rhtwo =
     {
       <c' g>16^1^5_\markup{\lower #3 \italic{cresc.}}[<bes f>^2^4 <c' g> <bes f> des^1 <bes f>] <c' g>[<bes f> <c' g> <bes f> des <bes f>]|%44
       <c' g>16[<ees' bes> <f' c'> <ees' bes> des' <ees' bes>] <f' c'>[<ees' bes> des' <ees' bes> <f' c'> <ees' bes>]|%45
-      des'16[\change Staff = "lh" \stemUp des^4_\f ees f \change Staff = "rh" \stemDown c'^5 bes] f^2[c bes,^3 aes^2 \change Staff = "lh" \stemUp des,_4 f,]|%46
-      g,16[\change Staff = "rh" \stemDown bes,^1 c ees f g] \change Staff = "lh" \stemUp ees_1[c bes, g, \change Staff = "rh" \stemDown f^1 g^2]|%47
+      des'16[\change Staff = "lh" \stemUp des^4_\f ees f \change Staff = "rh" \stemDown c'^5 bes] f^2[c bes,^3 aes,^2 \change Staff = "lh" \stemUp des,_4 f,]|%46
+      g,16[\change Staff = "rh" \stemDown bes,^1 c ees f g] \change Staff = "lh" \stemUp ees^1[c bes, g, \change Staff = "rh" \stemDown f^1 g^2]|%47
+      \ottava #0
+      \once \override Score.OttavaBracket.padding = #1.5
+      \ottava #1
       des'16[\change Staff = "lh" \stemUp des_4 ees f \change Staff = "rh" \stemDown c'^5 bes_\markup{\lower #3 \italic{dim.}}] f^2[c bes,^3 aes,^2 \change Staff = "lh" \stemUp des, f,]|%48
       g,16[\change Staff = "rh" \stemDown bes,^1 c des ees f] \change Staff = "lh" \stemUp des_1[bes,_2 aes, f, \change Staff = "rh" \stemDown ees^4 f]|%49
     }
-    c16[g f' ees c g] bes[f f' ees c f,]|%50
-    c'16[g f' ees c g] bes[f f' ees c f,]|%51
-    c'16[g f' ees c g] bes[f f'\pp ees c f,]|%52
-    c'16[g f' ees c g] bes[f f' ees c f,]|%53
-    c'16\<[g f' ees c g]\! bes\>[f f' ees c f,]\!|%54
+    c16[g f' ees c g] bes[f f' ees bes f]|%50
+    c'16[g f' ees c g] bes[f f' ees bes f]|%51
+    c'16[g f' ees c g] bes[f f'\pp ees bes f]|%52
+    c'16[g f' ees c g] bes[f f' ees bes f]|%53
+    c'16\<[g f' ees c g]\! bes\>[f f' ees bes f]\!|%54
   }
     \ottava #0
     \relative c'''
@@ -279,10 +309,10 @@ rhtwo =
       \stemDown
       a'16^2([e d' c a e] d^2[c d c \change Staff = "lh" \stemUp g \change Staff = "rh" \stemDown c]|%62
       d16[c d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^1^-])|%63
-      e8.^-^3_\markup{\lower #3 \italic{poco marcato}}\mp[d16^2^- e8^3^-] c4_-^1 \once \showStaffSwitch \change Staff = "lh" \once \stemUp g8^2^-|%64
+      e8.^-^3_\markup{\lower #3 \italic{poco marcato}}\mp[d16^2^- e8^3^-] c4_-^1 \override VoiceFollower.style = #'dashed-line \once \showStaffSwitch \change Staff = "lh" \once \stemUp g8^2^-|%64
       \change Staff = "rh"
       \stemDown
-      r16\p c([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^1^-])|%65
+      r16\p c^2([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^1^-])|%65
       e8.^2\mp[d16^- e8^-] g4^-^4 aes8|%66
       r16\p c,([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^-^1])|%67
       e8.^2\mp[d16 e8] g4.|%68
@@ -297,6 +327,27 @@ rhtwo =
       ees4. s4.|%78
       s2. s2.
       <bes g>4\ff s8 s4.|%81
+      s2.
+      <des aes>4 s8 s4.|%83
+      s2.
+      <ees bes>4 bes8_\markup{\lower #3 \italic{poco dim.}} f4.|%86
+      ees4 c8 s4. s2.
+      s4. <f bes,>4. s2. s2.
+      <f' ees>4. des|
+      g,4. f4.|
+      \stemDown
+      \once \override Slur.height-limit = #15
+      \once \override Slur.ratio = #0.35
+      c8(bes g f ees f|%93
+      \once \hide NoteHead g8[\change Staff = "lh" \stemUp bes,8 \change Staff = "rh" \stemDown c] bes f^1 g|
+      \stemUp
+      bes2.)\pp|
+      s2. s2. s2. s2. s2. s2. s2.
+      \fixed c'''
+      {
+        \ottava #1 <g' g>2~ \ottava #0
+        \once \hideNotes q4
+      }
     }
 }
 
@@ -330,17 +381,17 @@ lhtwo =
       c'8.] r16 
     }
     bes'32^5\<([ees f g])\! r8 r ees32^4\<([f g c])\!|%45
-    r8 r bes32\<([c d ees])\! r8 r \ottava #1 ees32\<([f g c])\!|%46
+    r8 r bes32\<([ees f g])\! r8 r \ottava #1 ees32\<([f g c])\!|%46
     \ottava #0
     s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s2. s4.
     e,,,,4.~|%71
-    \once \stemUp e2.~|%72
+    \once \stemUp e2._~|%72
     e4.~ e4.
     \stemUp
     <bes' ees,>2.^~|%73
-    q4 bes8^(s4.|%74
-    <bes ees,>2.^~^\p)|%75
-    q4 b8_( \once \stemDown c4._-|%76
+    q4 bes8_(s4.|%74
+    <bes) ees,>2.^~^\p|%75
+    q4 b8_( \once \stemDown \once \override NoteColumn.force-hshift = #-0.5 c4._-|%76
     <ees aes,>2.)^~|%77
     q4. \once \stemDown <f c f,>|%78
     <g ees c>2.^~|%79
@@ -366,27 +417,29 @@ lhtwo =
     ees8. bes,~ bes, ees,_~]|%93
     ees,4._~ ees,4 bes,8_~|%94
     bes,4. ees,4._~|%95
-    ees,4._~ ees,4 bes,8_~|%96
+    ees,4._~ ees,4 s16 bes,16_~|%96
     bes,4._(ees,_~)|%97
     ees,4._~ ees,4 bes,8_~_(|%98
     bes,4. ees,4._~)|%99
     \stemUp
-    ees,2._~ ees,2._~ ees,2._~ \stemUp ees,2.
+    ees,2._~ ees,2._~ ees,2._~ \stemDown ees,2.
     s2. s2.
   }
 }
 
-%\paper
-%{
+\paper
+{
   %ragged-last-bottom = ##f
   %ragged-bottom = ##f
-%}
+  %top-margin = 5\cm
+}
 
-%\header
-%{
-  %title = \markup{\fontsize #3 \bold{2. Stravaiging}}
-  %composer = \markup{\fontsize #3 {Erik Chisholm}}
-%}
+\header
+{
+  title = \markup{\fontsize #3 \bold{2. Stravaiging}}
+  composer = \markup{\fontsize #3 {Erik Chisholm}}
+}
+  \markup \vspace #1
 
 
 \score
@@ -421,6 +474,8 @@ lhtwo =
       }
     >>
   >>
-  %\layout{}
-  %\midi{}
+  \layout
+  {
+  }
+  \midi{}
 }
