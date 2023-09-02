@@ -27,6 +27,8 @@ rhone =
   \clef "treble"
   \relative c''
   {
+    \once \override Slur.ratio = #1.0
+    \once \override Slur.height-limit = #12
     r4 r8 r4 c'8^5^-^.^(\mp|%10
     g16^2^>[f8. g8^-^1] ees4 bes8^1|%11
     c4\<ees8^3\!bes'4^2\>c8^5\!|%12
@@ -106,6 +108,7 @@ rhone =
     bes4.~ bes4 r8|%97
     g'16^-^5[(f8.) g8] ees4^3 bes8~|%98
     bes2.|%99
+    \once \override Slur.height-limit = #8
     \change Staff = "lh" \voiceThree \once \override NoteColumn.force-hshift = #-0 \once \hide NoteHead ees,8^(\stemUp \change Staff = "rh" f_2 g_1 \stemNeutral c_3_\markup{\lower #3 \italic{morendo}} bes f'|%100
     g^1 bes^2 c^3 \clef "treble"
     \relative c'
@@ -134,6 +137,7 @@ lhone =
   \change Staff = "rh" f'8^-[ees'\> c'] bes[c' g]\!)|%4
   \change Staff = "lh"
   \clef "treble"
+  \once \override Slur.height-limit = #3
   f'4^2_-_(ees'8 f'4 g'8|%5
   R2.|%6
   \clef "bass"
@@ -183,6 +187,7 @@ lhone =
   \stemNeutral
   c16_-^1[bes,8. c8] ees,4 f,8|%53
   bes,4 c8 f4^- ees8)|%54
+  \once \override Slur.height-limit = #4
   des16_-^1_([aes,8. bes,8] aes,4 des,8|%55
   aes,4 bes,8 f4^- ees8|%56
   c16_-^1[bes,8. c8] ees,4.~|%57
@@ -242,6 +247,7 @@ rhtwo =
     g16[f c' bes g f] g[f c' bes g f])|%18
     \fixed c'''
     {
+      \once \override Slur.height-limit = #6
       <f c>16^1^5\mf([<ees bes,>^2^4 <f c> <ees bes,> <g, f,>^1 <ees bes,>] <f c>16[<ees bes,> <f c> <ees bes,> <g, f,>
       \ottava #1
       \fixed c''''
@@ -276,6 +282,7 @@ rhtwo =
     fes,4 fes'8 eeses4_2_1 bes8|%40
     bes4 \once \hideNotes bes8 \ottava #0 s4.|%41
     s2.|%42
+    \once \override Slur.height-limit = #6
     c,16^2([bes g' f c bes] c[bes g' f c f]|%42
     g16[f c' bes g bes] \ottava #1 c^2[bes g' f c f])|%43
     \fixed c'''
@@ -301,20 +308,26 @@ rhtwo =
     {
       aes16([des, des' c bes f] aes[des, des' ces bes f]|%55
       aes16\<[des, des' c bes f]\! aes\>[des, des' ces bes f]\!)|%56
+      \override Slur.height-limit = #6
       g16^3([c, bes' aes g des]) g([c, bes' aes g des])|%57
       ges16([c, bes' aes ges des]) fes([ces bes' aes ges d])|%58
       d16^2([a g' f d a]) a^2([e d' c a e])|%59
       e16^2([b a' g e b]) \clef "bass" b^2([fis e' d b fis])|%60
+      \revert Slur.height-limit
+      \once \override Slur.height-limit = #10
       a^2([e d' c a e] d^2[c \change Staff = "lh" \stemUp g c, g' c])|%61
       \change Staff = "rh"
       \stemDown
+      \once \override Slur.height-limit = #4
       a'16^2([e d' c a e] d^2[c d c \change Staff = "lh" \stemUp g \change Staff = "rh" \stemDown c]|%62
       d16[c d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^1^-])|%63
       e8.^-^3_\markup{\lower #3 \italic{poco marcato}}\mp[d16^2^- e8^3^-] c4_-^1 \override VoiceFollower.style = #'dashed-line \once \showStaffSwitch \change Staff = "lh" \once \stemUp g8^2^-|%64
       \change Staff = "rh"
       \stemDown
+      \once \override Slur.height-limit = #4
       r16\p c^2([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^1^-])|%65
       e8.^2\mp[d16^- e8^-] g4^-^4 aes8|%66
+      \once \override Slur.height-limit = #4
       r16\p c,([d c \change Staff = "lh" \stemUp f,_2 \change Staff = "rh" \stemDown c'] d[c d c \change Staff = "lh" \stemUp d,_4 \change Staff = "rh" \stemDown d'^-^1])|%67
       e8.^2\mp[d16 e8] g4.|%68
       f4. s4.|%69
@@ -338,7 +351,7 @@ rhtwo =
       g,4. f4.|
       \stemDown
       \once \override Slur.height-limit = #15
-      \once \override Slur.ratio = #0.35
+      \once \override Slur.ratio = #0.33
       c8(bes g f ees f|%93
       \once \hide NoteHead g8[\change Staff = "lh" \stemUp bes,8 \change Staff = "rh" \stemDown c] bes f^1 g|
       \stemUp
