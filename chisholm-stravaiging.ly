@@ -113,7 +113,7 @@ rhone =
       \tuplet 4/6 {f16_5[ees_1 bes'_4 f_2]}|%101
       \once \override TupletBracket.bracket-visibility = ##f
       \tuplet 10/12 {g16[bes c ees f] g[bes c ees f])}|%102
-      e,4\rest e8\rest e4\rest c8^4^.|%103
+      e,4\rest e8\rest e4\rest c'8^4^.|%103
       bes16^3[(g) r8 des'8^.] ces,4.~|%104
       ces4. r4 cis8(|%105
       ees'8^5) r8 r\sff \ottava #1 \fixed c'''{<g' f' ees' g>8^\staccatissimo} \ottava #0 r8 r \bar "|."
@@ -179,7 +179,7 @@ lhone =
   <f f,>8[<ees ees,> <f f,>~] q4.~|%42
   \once \stemDown q2.|%43
   s2. s2. s2. s2. s2. s2. s2. R2. R2.
-  r4 r8 r4 \clef "bass" ees8^(|%52
+  r4 r8 r4 \clef "bass" ees8^.^(|%52
   \stemNeutral
   c16_-^1[bes,8. c8] ees,4 f,8|%53
   bes,4 c8 f4^- ees8)|%54
@@ -210,12 +210,12 @@ lhone =
   r4 r8 <ees aes, ees,>4._~|%76
   q2.|%77
   s2. s s s s s
-  \stemUp
   bes,16[ees,8. f,8] s4 bes,8^(|
+  \stemUp
   c8 g f\> ees bes, c)\!|
   bes,16^([f8. g8] c'4) bes8^(|
   f'8^- ees' c' bes c' g)|
-  f'4^-^1^5^(ees'8^3 f'4^2 g'8|
+  f'4^-^1^5^(\once \override Fingering.padding = #2.5 ees'8-3 \once \override Fingering.padding = #2 f'4-2 g'8|
   c'4 bes8) s4 ees'8|
   s2. s2. 
   ees,4^(c,8 ees,4 bes,,16^3[c,])|
@@ -225,10 +225,11 @@ lhone =
   ees,4^(c,8 ees,4 bes,,16[c,]|
   \once \stemDown \voiceOne ees,4.) s4.
   s2. s2. s4 r8 s4
+  \stemDown
   c'8^.^1|
   bes16^2[(g) r8 des'8^.]
   \stemUp
-  ces4.~ ces r4 a,8^1_(ees,8_3) r8 r8 \clef "treble" \fixed c'''{\once \stemDown <f ees bes,>8^\staccatissimo} r8 r
+  ces4._~ ces r4 a,8^1_(ees,8_3) r8 r8 \clef "treble" \fixed c'''{\once \stemDown <f ees bes,>8^\staccatissimo} r8 r
 }
 
 rhtwo =
@@ -403,10 +404,10 @@ lhtwo =
   <ees' bes ees>4 bes8^\staccatissimo <bes ees bes,>4 ees8^\staccatissimo|%83
   <ees bes, ees,>4_> bes8^\staccatissimo <bes ees bes,>4.~|%84
   q4. r4 ees8^.^\mf|%85
+  \once \override NoteColumn.force-hshift = #-0.35 bes,4.^1^>^(<bes, g,>4) bes,8^5_~|%86
   \stemDown
-  bes,4.^1^>(<bes, g,>4) bes,8^5_~|%86
   bes,2 r4|%87
-  bes,2 s8 bes8~|%88
+  bes,2 s8 bes8_~|%88
   bes4. r4 r8|%89
   bes2.|%90
   ees2.|%91
@@ -429,8 +430,8 @@ lhtwo =
 
 \paper
 {
-  %ragged-last-bottom = ##f
-  %ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  ragged-bottom = ##f
   %top-margin = 5\cm
 }
 
@@ -474,8 +475,6 @@ lhtwo =
       }
     >>
   >>
-  \layout
-  {
-  }
+  \layout{}
   \midi{}
 }
