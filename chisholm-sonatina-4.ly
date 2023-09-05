@@ -261,7 +261,7 @@ lhtwo =
 
 \header
 {
-  title = \markup{\fontsize #3 \bold{Fourth Sonatina}}
+  title = \markup{\fontsize #3 \bold{Sonatina No.4}}
   subtitle = \markup{From 2 Lute Dances by Hans Neusiedler (1509-1563)}
   composer = \markup{\fontsize #3 {Erik Chisholm}}
 }
