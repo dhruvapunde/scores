@@ -26,7 +26,7 @@ PieceOneRhVoiceOne =
     \voiceOne
     \voiceTwo e8^>\p[e e] e^>[e]|%1
     e8^>[e e] e^>[e]|%2
-    e8^>\<[e e] e^>[e]|%3
+    e8^>\<[e] e^>[e e]|%3
     \voiceOne e8^>[e e] e^>[e]|%4
     \voiceTwo
     e8^>\mf[ees\! c] e^>[f]|%5
@@ -95,7 +95,7 @@ PieceOneRhVoiceTwo =
     r4 r8 e[\cdown \voiceOne e]|%4
     \cup
     s8*5 s8*5 s8*5 s8*5
-    s4 s8 f'8^>[<e b>] <ees aes>8^>[<d a> <des b>]|%9
+    s4 s8 f'8^>[<e b>] <ees aes,>8^>[<d a> <des b>]|%9
     s8*7 s8*5 s8*5
     \voiceTwo
     g,4 ges f8|%13
@@ -181,20 +181,25 @@ PieceTwoRhVoiceOne =
   \relative c''
   {
     b4\mp f a aes g|%1
+    d4 cis gis ais a|%2
   }
 }
 
 PieceTwoRhVoiceTwo =
 {
-  \voiceTwo
-  d
+  \voiceOne
+  s4*5 s4*5 s4*5 s4*5 s4*5 s4*5 s4*5 s4*5 s4*5 s4*5 s4*5
+  \relative c''
+  {
+  }
 }
 
 PieceTwoLhVoiceOne =
 {
   \clef "bass" 
   \voiceOne
-  d
+  R4*5 R4*5
+  gis4 d f e ees|%3
 }
 
 PieceTwoLhVoiceTwo =
