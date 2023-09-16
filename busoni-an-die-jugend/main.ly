@@ -1,3 +1,9 @@
 \version "2.24.1"
 
-\include "preludietto.ly"
+\paper
+{
+}
+
+%\include "preludietto.ly"
+
+\include "fughetta.ly"
