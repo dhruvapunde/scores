@@ -287,5 +287,8 @@ lefthand =
     }
   >>
   \layout{}
-  \midi{}
+  \midi
+  {
+    \tempo 4 = 100
+  }
 }

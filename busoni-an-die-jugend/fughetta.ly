@@ -47,12 +47,9 @@ FirstVoice =
     \tupvisibility \tuplet 18/12 {des16[c des c des c des c des]) c([des c des c des c des c]}|%32
     \tupvisibility \tuplet 18/12 {des[c des c des c des c des] c[des c des c des c des c])}|%33
     \tupvisibility \tuplet 18/12 {d!([c d c d c d c d] c[d c d c d c d c])}|%34
-    %d2._\markup{\lower #3 \italic{poco}}\f^\startTrillSpan|%35
-    %d2.|%36
-    %\tupvisibility \tuplet 9/6 {d16\stopTrillSpan^([ees d ees d ees d ees d])} r4 r8|%37
-    %\tupvisibility \tuplet 9/6 {c,16_([des c des c des c des c])} r4 r8|%38
-    %\clef "bass"
-    %r4 g16[a] bes aes g b c bes|%39
+    c2._\markup{\lower #3 \italic{poco}}\f|%35
+    c2.|%36
+    c4._\markup{\lower #3 \italic{molto dim}} \tupvisibility \tuplet 9/6 {aes16_(beses aes beses aes beses aes beses aes)}|%37
   }
 }
 
@@ -94,12 +91,13 @@ SecondVoice =
     aes4. ces4 bes8|%33
     aes2.^>^~|%34
     aes4.^(a4 g8)|%35
-    g4^(f8 e4.)|%36
+    g4^(f8 e!4.)|%36
     d2.^\startTrillSpan|%37
     d2.|%38
     \set subdivideBeams = ##t
     \set baseMoment = #(ly:make-moment 1/8)
     \tupvisibility \tuplet 9/6 {d16^\markup{\italic{legg.}}\stopTrillSpan^(ees d ees d ees d ees d)} r4 r8|%39
+    \tupvisibility \tuplet 9/6 {c,16_(des c des c des c des c)} r4 r8|%40
   }
 }
 
