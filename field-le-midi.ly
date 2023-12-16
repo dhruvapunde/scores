@@ -16,6 +16,11 @@ FirstRh =
     cis'4\sustainOn b8 a e cis'\sustainOff|
     e8 fis, a gis b <e e,_~>|
     <cis e,>8 r e, fis4 gis8|
+    %%%%
+    gis4 fis8 e4 cis'8|
+    d4 ais8 b8 <fis' gis,> <e a,>|
+    <<{s8*3 \stemDown fis,4 e8} \\ {<e' fis,>8 <dis gis,> <cis a> \stemUp cis b a}>>|
+    <a e>8\sustainOn gis <cis dis,>16.[b32] e,8 r e|
   }
 }
 
@@ -34,6 +39,7 @@ FirstLh =
   a,,8 e[d'] cis'4 r8|
   a,,4 a8 <gis' d' b e>4\fz r8|
   a8 r cis' ais4 b8|
+  %%%%
 }
 
 \score
