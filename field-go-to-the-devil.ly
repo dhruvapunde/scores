@@ -496,6 +496,7 @@ LeftHand =
   title = "Go to the Devil and Shake Yourself"
   subtitle = "A favourite Irish Dance arranged as a Rondo"
   composer = "John Field"
+  opus = "H 3"
 }
 
 \score
