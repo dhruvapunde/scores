@@ -62,4 +62,5 @@ FirstLh =
       \PianoStaff \consists "Span_stem_engraver"
     }
   }
+  \midi{}
 }
