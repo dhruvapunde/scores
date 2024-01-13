@@ -58,57 +58,57 @@ Words =
   }
 }
 
-%CursedRightHand =
-%{
-  %\global
-  %\clef "treble"
-  %\tempo "Moderato"
-  %\relative c'''
-  %{
-    %ges4-.\mf\sustainOn des-. aes-.|
-    %ees4-. \clef "bass" bes-. f-.\sustainOff|
-    %\clef "treble"
-    %s4 c'16(e g ais d! f! gis b)|
-    %s4 c,,16(e g ais d! f! gis b)|
-    %s4 c,,16(e g ais d! f! gis b)|
-    %s4 c,,16(e g ais d! f! gis b)|
-    %\override Staff.RehearsalMark.direction = #UP
-    %\override Staff.RehearsalMark.rotation = #'(0 0 0)
-    %<<{b,4\rest \stemDown <fis' fis,>2} \\ {s2 b,4\rest}>> \bar "||"
-    %\mark \markup { \smaller \smaller \musicglyph #"scripts.ufermata" }
-    %\key e \major
-    %<<{cis8 cis s4 fis8_(e) a, gis} \\ {<fis' fis,>4^(<gis b, gis>8[<fis a,>]) gis,4 e}>>
-    %fis4 gis e2|
-    %<c' c,>2\mf\<fis,|
-    %cis1\f\!|
-    %\time 3/4 
-    %r4\mf cis16\sustainOn e g ais-\markup{\lower #3 \italic{ritard.}} d f gis b|
-    %dis8 r8 r4 r|
-  %}
-%}
-%
-%CursedLeftHand =
-%{
-  %\global
-  %\clef "bass"
-  %R2.|
-  %R2.|
-  %<<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
-  %<<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
-  %<<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
-  %<<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
-  %\override Staff.RehearsalMark.direction = #DOWN
-  %\override Staff.RehearsalMark.rotation = #'(180 0 0)
-  %<<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~^\< \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2\!} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s4 d4\rest}>> \bar "||"
-  %\mark \markup { \smaller \smaller \musicglyph #"scripts.ufermata" }
-  %\key e \major
-  %<<{<dis' a>4 dis' e'2} \\ {b,2 s} \\ {\stemDown s4 b8_([bis] cis'2)}>>|
-  %a8(cis' b dis' gis b gis e)|
-  %c2 <fis fis,>|
-  %cis1|
-  %<<{\set tieWaitForNote = ##t \autoBeamOff s16 \once \hide Stem dis \once \hide Stem fis \once \hide Stem ais \once \stemDown <ais^~ fis^~ dis_~ c_~>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \eighthshift c8 \eighthshift fis8 s2}>>|
-  %<<{\once \stemDown \override Flag.transparent = ##f <ais fis dis c>8 d8\rest d4\rest d4\rest} \\ {s2.} \\ {s2.} \\ {s2.}>>|
-%}
+CursedRightHand =
+{
+  \global
+  \clef "treble"
+  \tempo "Moderato"
+  \relative c'''
+  {
+    ges4-.\mf\sustainOn des-. aes-.|
+    ees4-. \clef "bass" bes-. f-.\sustainOff|
+    \clef "treble"
+    s4 c'16(e g ais d! f! gis b)|
+    s4 c,,16(e g ais d! f! gis b)|
+    s4 c,,16(e g ais d! f! gis b)|
+    s4 c,,16(e g ais d! f! gis b)|
+    \override Staff.RehearsalMark.direction = #UP
+    \override Staff.RehearsalMark.rotation = #'(0 0 0)
+    <<{b,4\rest \stemDown <fis' fis,>2} \\ {s2 b,4\rest}>> \bar "||"
+    \mark \markup { \smaller \smaller \musicglyph #"scripts.ufermata" }
+    \key e \major
+    <<{cis8 cis s4 fis8_(e) a, gis} \\ {<fis' fis,>4^(<gis b, gis>8[<fis a,>]) gis,4 e}>>
+    fis4 gis e2|
+    <c' c,>2\mf\<fis,|
+    cis1\f\!|
+    \time 3/4 
+    r4\mf cis16\sustainOn e g ais-\markup{\lower #3 \italic{ritard.}} d f gis b|
+    dis8 r8 r4 r|
+  }
+}
+
+CursedLeftHand =
+{
+  \global
+  \clef "bass"
+  R2.|
+  R2.|
+  <<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
+  <<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
+  <<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
+  <<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~ \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s2}>>|
+  \override Staff.RehearsalMark.direction = #DOWN
+  \override Staff.RehearsalMark.rotation = #'(180 0 0)
+  <<{\set tieWaitForNote = ##t \autoBeamOff \hide Flag \once \hide Stem c16~^\< \once \hide Stem dis~ \once \hide Stem fis~ \once \hide Stem ais~ \once \stemDown <ais fis dis c>2\!} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \once \hide Flag \eighthshift c8 \eighthshift fis8 s4 d4\rest}>> \bar "||"
+  \mark \markup { \smaller \smaller \musicglyph #"scripts.ufermata" }
+  \key e \major
+  <<{<dis' a>4 dis' e'2} \\ {b,2 s} \\ {\stemDown s4 b8_([bis] cis'2)}>>|
+  a8(cis' b dis' gis b gis e)|
+  c2 <fis fis,>|
+  cis1|
+  <<{\set tieWaitForNote = ##t \autoBeamOff s16 \once \hide Stem dis \once \hide Stem fis \once \hide Stem ais \once \stemDown <ais^~ fis^~ dis_~ c_~>2} \\ {c16 dis fis a s2} \\ {\autoBeamOff s16 \eighthshift dis8 s s s4} \\ {\stemUp \autoBeamOff \eighthshift c8 \eighthshift fis8 s2}>>|
+  <<{\once \stemDown \override Flag.transparent = ##f <ais fis dis c>8 d8\rest d4\rest d4\rest} \\ {s2.} \\ {s2.} \\ {s2.}>>|
+}
 
 RightHand =
 {
@@ -176,6 +176,7 @@ LeftHand =
     \with
     {
       instrumentName = "Voice"
+      midiInstrument = "voice oohs"
     }
     {
       \SongNotes
@@ -188,6 +189,7 @@ LeftHand =
     \with
     {
       instrumentName = "Piano"
+      midiInstrument = "acoustic grand"
     }
     <<
       \new Staff = "rh"
@@ -209,4 +211,5 @@ LeftHand =
     >>
   >>
   \layout{}
+  \midi{}
 }
